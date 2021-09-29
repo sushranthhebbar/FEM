@@ -28,8 +28,15 @@ int main()
     //phi << vec3;
     //Eigen::Ref<const Eigen::Vector3d> x = {1 , 2 , 3};
     //cout<<phi<<endl;
-    //cout<<(m.inverse())<<endl;
+    //cout<<m<<endl;
     //cout<<(m.inverse() * vec1)<<endl;
 
+    Eigen::Matrix43d dphi;
+    Eigen::Vector3d one;
+    one << 1, 1, 1;
+    //cout<<one.transpose()<<endl;
+    dphi << (one.transpose()) , m;
+    //dphi << m;
+    cout<<dphi<<endl;
     return 0;
 }
