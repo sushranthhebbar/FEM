@@ -13,6 +13,7 @@ inline void quadrature_single_point(Ret &&integrated, Eigen::Ref<const Eigen::Ve
                                                Eigen::Ref<const Eigen::RowVectorXi> element, double volume,
                                                Integrand_Func integrand) {
 
-
+        integrand(integrated, q, element, Eigen::Vector3d(0.25, 0.25, 0.25));
+        integrated = integrated * volume;
 }
 
