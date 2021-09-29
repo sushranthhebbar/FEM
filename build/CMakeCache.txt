@@ -383,6 +383,9 @@ OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
 
+//Use main
+UNDERSTAND:BOOL=OFF
+
 //Path to a file.
 X11_ICE_INCLUDE_PATH:PATH=/usr/include
 

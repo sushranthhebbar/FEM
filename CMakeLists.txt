@@ -31,7 +31,7 @@ if(UNDERSTAND)
 else()
  set(MAIN_FILE ${MAIN_FILE} main.cpp)
 endif(UNDERSTAND)
-unset(UNDERSTAND CACHE) 
+#unset(UNDERSTAND CACHE) 
 
 #build executable 
 add_executable(${PROJECT_NAME} ${MAIN_FILE} assignment_setup.h ${H_FILES} ${H_SHARED_FILES} ${CPP_FILES} ${CPP_SHARED_FILES})
