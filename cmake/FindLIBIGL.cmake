@@ -6,7 +6,9 @@
 if(LIBIGL_FOUND)
     return()
 endif()
-
+#message(STATUS "CMAKE_SOURCE_DIR = ${CMAKE_SOURCE_DIR}")
+#cmake_path(GET CMAKE_SOURCE_DIR PARENT_PATH CMAKE_SOURCE_DIR)
+#message(STATUS "CMAKE_SOURCE_DIR = ${CMAKE_SOURCE_DIR}")
 find_path(LIBIGL_INCLUDE_DIR igl/readOBJ.h
     HINTS
         ENV LIBIGL
