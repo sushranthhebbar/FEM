@@ -46,7 +46,7 @@ int main()
     phi.col(3) = one;
     cout<<phi<<endl;*/
 
-    Eigen::MatrixXd A1, A2, A3;
+    /*Eigen::MatrixXd A1, A2, A3;
     A1.resize(3, 2);
     A2.resize(3, 2);
     A3.resize(3, 4);
@@ -59,7 +59,17 @@ int main()
     q << 1, 2, 3, 4, 5, 6;
     Eigen::Vector3d qi = q.segment<3>(2);
     cout<<qi<<endl;*/
-    cout<<A3<<endl;
+    //cout<<A3<<endl;
+    Eigen::MatrixXd P, A, B, I;
+    P.resize(4, 4);
+    A.resize(2, 2);
+    B.resize(2, 2);
+    I.resize(2, 2);
+    I.setIdentity();
+    A = I / 60;
+    B = I / 120;
+    P << A, B, B, A;
+    cout<< 6 * P <<endl;
 
     return 0;
 }
