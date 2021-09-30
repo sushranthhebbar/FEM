@@ -46,10 +46,20 @@ int main()
     phi.col(3) = one;
     cout<<phi<<endl;*/
 
-    Eigen::Vector6d q;
+    Eigen::MatrixXd A1, A2, A3;
+    A1.resize(3, 2);
+    A2.resize(3, 2);
+    A3.resize(3, 4);
+
+    A1 << 1, 2, 3, 4, 5, 6;
+    A2 << 7, 8, 9, 10, 11, 12;
+    A3 << A1, A2;
+
+    /*Eigen::Vector6d q;
     q << 1, 2, 3, 4, 5, 6;
     Eigen::Vector3d qi = q.segment<3>(2);
-    cout<<qi<<endl;
+    cout<<qi<<endl;*/
+    cout<<A3<<endl;
 
     return 0;
 }
