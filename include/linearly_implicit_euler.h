@@ -20,5 +20,27 @@ inline void linearly_implicit_euler(Eigen::VectorXd &q, Eigen::VectorXd &qdot, d
                             const Eigen::SparseMatrixd &mass,  FORCE &force, STIFFNESS &stiffness, 
                             Eigen::VectorXd &tmp_force, Eigen::SparseMatrixd &tmp_stiffness) {
     
+    force(tmp_force, q, qdot);
+    stiffness(tmp_stiffness, q, qdot);
 
+    tmp_force = mass * qdot + dt * tmp_force;
+    tmp_stiffness = mass - dt * dt * tmp_stiffness;
+
+    Eigen::SimplicialLDLT<Eigen::SparseMatrix<double>> solver;
+    solver.compute(tmp_stiffness);
+    if(solver.info()!=Eigen::Success) 
+    {
+        std::cout<<solver.info()<<std::endl;
+        // decomposition failed
+        return;
+    }
+    qdot = solver.solve(tmp_force);
+    if(solver.info()!=Eigen::Success)
+    {
+        std::cout<<solver.info()<<std::endl;
+        // solving failed
+        return;
+    }
+
+    q = q + qdot * dt;
 }
