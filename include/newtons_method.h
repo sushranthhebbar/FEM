@@ -29,7 +29,7 @@ double newtons_method(Eigen::VectorXd &x0, Objective &f, Jacobian &g, Hessian &H
          // decomposition failed
          return 0.0;
       }
-      Eigen::VectorXd d = solver.solve(tmp_g);
+      Eigen::VectorXd d = solver.solve(-1 * tmp_g);
       if(solver.info()!=Eigen::Success)
       {
          std::cout<<solver.info()<<std::endl;
@@ -37,9 +37,10 @@ double newtons_method(Eigen::VectorXd &x0, Objective &f, Jacobian &g, Hessian &H
          return 0.0;
       }
       double alpha = 1;
+      double lim = f(x0) + c * d.transpose() * tmp_g;
       while(true)
       {
-         if((alpha < (1e-8)) || (f(x0 + alpha * d) <= (f(x0) + c * d.transpose() * tmp_g)))
+         if((alpha < 1e-5) || (f(x0 + alpha * d) <= lim))
          {
             break;
          }
