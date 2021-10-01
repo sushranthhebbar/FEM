@@ -26,7 +26,7 @@ inline void implicit_euler(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt,
 
             auto g = [&](Eigen::VectorXd &f, Eigen::VectorXd &v){
                 force(f, q + dt * v, v);
-                f = -1 * f * dt + mass * (v - tmp_qdot);
+                f = -1 * f * dt + mass * (v - qdot);
             };
 
             auto H = [&](Eigen::SparseMatrixd &K, Eigen::VectorXd &v){
@@ -35,7 +35,8 @@ inline void implicit_euler(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt,
             };
 
 
-            newtons_method(qdot, energy, g, H, 5, tmp_force, tmp_stiffness);
+            newtons_method(tmp_qdot, energy, g, H, 5, tmp_force, tmp_stiffness);
+            qdot = tmp_qdot;
             q = q + dt * qdot;
 
 }
