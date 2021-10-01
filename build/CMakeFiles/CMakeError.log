@@ -1,22 +1,22 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_96de2/fast && /usr/bin/make  -f CMakeFiles/cmTC_96de2.dir/build.make CMakeFiles/cmTC_96de2.dir/build
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_87f5b/fast && /usr/bin/make  -f CMakeFiles/cmTC_87f5b.dir/build.make CMakeFiles/cmTC_87f5b.dir/build
 make[1]: Entering directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_96de2.dir/src.c.o
-/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_96de2.dir/src.c.o -c /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_96de2
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96de2.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC  -rdynamic CMakeFiles/cmTC_96de2.dir/src.c.o -o cmTC_96de2 
-/usr/bin/ld: CMakeFiles/cmTC_96de2.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_87f5b.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_87f5b.dir/src.c.o -c /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_87f5b
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87f5b.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC  -rdynamic CMakeFiles/cmTC_87f5b.dir/src.c.o -o cmTC_87f5b 
+/usr/bin/ld: CMakeFiles/cmTC_87f5b.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
 /usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_96de2.dir/build.make:99: cmTC_96de2] Error 1
+make[1]: *** [CMakeFiles/cmTC_87f5b.dir/build.make:99: cmTC_87f5b] Error 1
 make[1]: Leaving directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_96de2/fast] Error 2
+make: *** [Makefile:127: cmTC_87f5b/fast] Error 2
 
 
 Source file was:
@@ -43,18 +43,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_d705f/fast && /usr/bin/make  -f CMakeFiles/cmTC_d705f.dir/build.make CMakeFiles/cmTC_d705f.dir/build
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_12d9f/fast && /usr/bin/make  -f CMakeFiles/cmTC_12d9f.dir/build.make CMakeFiles/cmTC_12d9f.dir/build
 make[1]: Entering directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d705f.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_d705f.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.21/Modules/CheckFunctionExists.c
-Linking C executable cmTC_d705f
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d705f.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_d705f.dir/CheckFunctionExists.c.o -o cmTC_d705f  -lpthreads 
+Building C object CMakeFiles/cmTC_12d9f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_12d9f.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_12d9f
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12d9f.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_12d9f.dir/CheckFunctionExists.c.o -o cmTC_12d9f  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_d705f.dir/build.make:99: cmTC_d705f] Error 1
+make[1]: *** [CMakeFiles/cmTC_12d9f.dir/build.make:99: cmTC_12d9f] Error 1
 make[1]: Leaving directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_d705f/fast] Error 2
+make: *** [Makefile:127: cmTC_12d9f/fast] Error 2
 
 
 
