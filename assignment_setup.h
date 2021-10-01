@@ -336,6 +336,8 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
         }
     }
     
+    //std::cout<<V.rows()<<" "<<T.rows()<<" "<<V_skin.rows()<<std::endl;
+
     igl::boundary_facets(T, F);
     F = F.rowwise().reverse().eval();
     

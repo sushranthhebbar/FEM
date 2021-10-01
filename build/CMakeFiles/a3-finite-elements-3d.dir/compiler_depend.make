@@ -5622,7 +5622,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/build_skinning_matrix.cpp.o: ../src/bui
   ../extern/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
   ../extern/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
   ../include/phi_linear_tetrahedron.h \
-  /usr/include/c++/9/iostream
+  /usr/include/c++/9/iostream \
+  /usr/include/c++/9/math.h
 
 CMakeFiles/a3-finite-elements-3d.dir/src/d2V_linear_tetrahedron_dq2.cpp.o: ../src/d2V_linear_tetrahedron_dq2.cpp \
   /usr/include/stdc-predef.h \
