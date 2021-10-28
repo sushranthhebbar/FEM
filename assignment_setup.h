@@ -190,6 +190,8 @@ Eigen::MatrixXd V; //vertices of simulation mesh
 Eigen::MatrixXi T; //faces of simulation mesh
 Eigen::MatrixXi F; //faces of simulation mesh
 
+Eigen::VectorXi Vb;
+
 //variables for skinning
 Eigen::MatrixXd V_skin;
 Eigen::MatrixXi F_skin;
@@ -269,6 +271,10 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                 f.segment<3>(3*Visualize::picked_vertices()[pickedi]) -= dV_mouse.segment<3>(3);
             }
 
+            for(int i = 0; i < Vb.rows(); i++){
+                f.segment<3>(Vb(i)) -= Eigen::Vector3d(0.0, 100, 0.0);
+            }
+
             f = P*f; 
         };
 
@@ -340,7 +346,27 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
 
     igl::boundary_facets(T, F);
     F = F.rowwise().reverse().eval();
-    
+    //std::cout<<F<<std::endl;
+    Eigen::MatrixXi Ft = F.transpose();
+    Eigen::VectorXi ind;
+    ind = Eigen::Map<Eigen::VectorXi>(Ft.data(), Ft.rows()*Ft.cols());
+    //std::cout<<ind<<std::endl;
+    //std::set<int> o{ind.begin(), ind.end()};
+    std::vector<int> tmp;
+    for(int i = 0; i < ind.size(); i++) tmp.push_back(ind(i));
+    std::sort(tmp.begin(), tmp.end());
+    auto it = std::unique(tmp.begin(), tmp.end());
+    tmp.resize(std::distance(tmp.begin(), it));
+
+    //Eigen::VectorXi Vb((int)tmp.size());
+    Vb.resize((int)tmp.size());
+    for(int i = 0; i < tmp.size();i++) Vb(i) = tmp[i];
+
+    //std::cout<<Vb.rows()<<std::endl;
+    //std::cout<<V.rows()<<std::endl;
+    //for(int i = 0; i < tmp.size(); i++) std::cout<<tmp[i]<<" ";
+    //std::cout<<std::endl;
+    //auto it = std::unique(ind.begin(), ind.end());
     build_skinning_matrix(N, V, T, V_skin);
 
     //setup simulation 
