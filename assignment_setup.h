@@ -189,6 +189,7 @@ inline void assignment_setup(Eigen::VectorXd &q, Eigen::VectorXd &qdot) {
 Eigen::MatrixXd V; //vertices of simulation mesh 
 Eigen::MatrixXi T; //faces of simulation mesh
 Eigen::MatrixXi F; //faces of simulation mesh
+Eigen::MatrixXi Fb;
 
 Eigen::VectorXi Vb;
 
@@ -203,6 +204,9 @@ double YM = 6e5; //young's modulus
 double mu = 0.4; //poissons ratio
 double D = 0.5*(YM*mu)/((1.0+mu)*(1.0-2.0*mu));
 double C = 0.5*YM/(2.0*(1.0+mu));
+double pi = 3.1415;
+double mew = 4 * pi * 1e-7;
+double k = 0.33; 
 
 //BC
 std::vector<unsigned int> fixed_point_indices;
@@ -266,8 +270,10 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
     auto force = [&](Eigen::VectorXd &f, Eigen::Ref<const Eigen::VectorXd> q2, Eigen::Ref<const Eigen::VectorXd> qdot2) { 
         
             assemble_forces(f, P.transpose()*q2+x0, P.transpose()*qdot2, V, T, v0, C,D);
-            Eigen::VectorXd g(3);
-            g << 0.0, 100.0, 0.0;
+            Eigen::VectorXd H(3), N(3);
+            H << 0.0, 5000000.0, 0.0;
+            N << 0.0, 1.0, 0.0;
+            // between 10^5 and 10^7(too high blows up)
             for(unsigned int pickedi = 0; pickedi < spring_points.size(); pickedi++) {
                 dV_spring_particle_particle_dq(dV_mouse, spring_points[pickedi].first, (P.transpose()*q2+x0).segment<3>(spring_points[pickedi].second), 0.0, k_selected_now);
                 f.segment<3>(3*Visualize::picked_vertices()[pickedi]) -= dV_mouse.segment<3>(3);
@@ -275,7 +281,8 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
             if(magnet){
                 for(int i = 0; i < Vb.rows(); i++){
                     //f.segment<3>(3 * Vb(i)) -= Eigen::Vector3d(0.0, 10000.0, 0.0);
-                    f.segment<3>(3 * Vb(i)) -= g;
+                    double c = (0.5 * mew * k * H.transpose() * H);
+                    f.segment<3>(3 * Vb(i)) += c * N;
                 }
             }
             f = P*f; 
@@ -328,6 +335,7 @@ bool key_down_callback(igl::opengl::glfw::Viewer &viewer, unsigned char key, int
     }
     else if(key=='B'){
         magnet = ! magnet;
+        std::cout<<"magnet = "<<magnet<<"\n";
     }
 
     return false;
@@ -367,6 +375,26 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     //Eigen::VectorXi Vb((int)tmp.size());
     Vb.resize((int)tmp.size());
     for(int i = 0; i < tmp.size();i++) Vb(i) = tmp[i];
+
+    Fb.resize(F.rows(), F.cols());
+
+    for(int i = 0; i < F.rows(); i++)
+    {
+        for(int j = 0; j < F.cols(); j++)
+        {
+            int idx = F(i, j);
+            int pos = -1;
+            for(int k = 0; k < Vb.rows(); k++)
+            {
+                if(Vb(k) == idx)
+                {
+                    Fb(i, j) = k;
+                    break;
+                }
+            }
+            
+        }
+    }
 
     //std::cout<<Vb.rows()<<std::endl;
     //std::cout<<V.rows()<<std::endl;
