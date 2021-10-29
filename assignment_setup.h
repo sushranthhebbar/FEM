@@ -223,6 +223,7 @@ std::vector<std::pair<Eigen::Vector3d, unsigned int>> spring_points;
 bool skinning_on = true;
 bool fully_implicit = false;
 bool bunny = true; 
+bool magnet = false;
 
 //selection spring
 double k_selected = 1e5;
@@ -265,16 +266,18 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
     auto force = [&](Eigen::VectorXd &f, Eigen::Ref<const Eigen::VectorXd> q2, Eigen::Ref<const Eigen::VectorXd> qdot2) { 
         
             assemble_forces(f, P.transpose()*q2+x0, P.transpose()*qdot2, V, T, v0, C,D);
-
+            Eigen::VectorXd g(3);
+            g << 0.0, 100.0, 0.0;
             for(unsigned int pickedi = 0; pickedi < spring_points.size(); pickedi++) {
                 dV_spring_particle_particle_dq(dV_mouse, spring_points[pickedi].first, (P.transpose()*q2+x0).segment<3>(spring_points[pickedi].second), 0.0, k_selected_now);
                 f.segment<3>(3*Visualize::picked_vertices()[pickedi]) -= dV_mouse.segment<3>(3);
             }
-
-            for(int i = 0; i < Vb.rows(); i++){
-                f.segment<3>(Vb(i)) -= Eigen::Vector3d(0.0, 100, 0.0);
+            if(magnet){
+                for(int i = 0; i < Vb.rows(); i++){
+                    //f.segment<3>(3 * Vb(i)) -= Eigen::Vector3d(0.0, 10000.0, 0.0);
+                    f.segment<3>(3 * Vb(i)) -= g;
+                }
             }
-
             f = P*f; 
         };
 
@@ -322,6 +325,9 @@ bool key_down_callback(igl::opengl::glfw::Viewer &viewer, unsigned char key, int
         
         skinning_on = !skinning_on;
         Visualize::toggle_skinning(skinning_on);
+    }
+    else if(key=='B'){
+        magnet = ! magnet;
     }
 
     return false;
