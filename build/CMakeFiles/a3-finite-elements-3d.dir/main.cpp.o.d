@@ -700,4 +700,5 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/implicit_euler.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/newtons_method.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/build_skinning_matrix.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/compute_normals.h
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/compute_normals.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/per_vertex_normals.h

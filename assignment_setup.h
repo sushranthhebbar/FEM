@@ -192,7 +192,7 @@ Eigen::MatrixXi T; //faces of simulation mesh
 Eigen::MatrixXi F; //faces of simulation mesh
 Eigen::MatrixXi Fb;
 
-Eigen::VectorXi Vb;
+Eigen::VectorXi Ib;
 
 //variables for skinning
 Eigen::MatrixXd V_skin;
@@ -271,20 +271,25 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
     auto force = [&](Eigen::VectorXd &f, Eigen::Ref<const Eigen::VectorXd> q2, Eigen::Ref<const Eigen::VectorXd> qdot2) { 
         
             assemble_forces(f, P.transpose()*q2+x0, P.transpose()*qdot2, V, T, v0, C,D);
-            Eigen::VectorXd H(3);
-            H << 0.0, 5000000.0, 0.0;
-            Eigen::MatrixXd N;
-            compute_normals(N, q, Vb, Fb);
             // between 10^5 and 10^7(too high blows up)
             for(unsigned int pickedi = 0; pickedi < spring_points.size(); pickedi++) {
                 dV_spring_particle_particle_dq(dV_mouse, spring_points[pickedi].first, (P.transpose()*q2+x0).segment<3>(spring_points[pickedi].second), 0.0, k_selected_now);
                 f.segment<3>(3*Visualize::picked_vertices()[pickedi]) -= dV_mouse.segment<3>(3);
             }
             if(magnet){
-                for(int i = 0; i < Vb.rows(); i++){
-                    //f.segment<3>(3 * Vb(i)) -= Eigen::Vector3d(0.0, 10000.0, 0.0);
-                    double c = (0.5 * mew * k * H.transpose() * H);
-                    //f.segment<3>(3 * Vb(i)) += c * N(i);
+                Eigen::VectorXd H(3), nan(3);
+                H << 0.0, 5000000.0, 0.0;
+                Eigen::MatrixXd Nor;
+                Nor.resize(Fb.rows(), Fb.cols());
+                compute_normals(Nor, q, Ib, Fb);
+                double c = (0.5 * mew * k * H.transpose() * H);
+                for(int i = 0; i < Ib.rows(); i++){
+                    //f.segment<3>(3 * Ib(i)) -= Eigen::Vector3d(0.0, 10000.0, 0.0);
+                    Eigen::RowVector3d n = Nor.row(i);
+                    //f.segment<3>(3 * Ib(i)) += c * n.transpose();
+                    if(!n.hasNaN()){
+                        f.segment<3>(3 * Ib(i)) += c * n.transpose();
+                    }
                 }
             }
             f = P*f; 
@@ -358,7 +363,7 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
         }
     }
     
-    //std::cout<<V.rows()<<" "<<T.rows()<<" "<<V_skin.rows()<<std::endl;
+    std::cout<<V.rows()<<" "<<T.rows()<<" "<<V_skin.rows()<<std::endl;
 
     igl::boundary_facets(T, F);
     F = F.rowwise().reverse().eval();
@@ -374,9 +379,11 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     auto it = std::unique(tmp.begin(), tmp.end());
     tmp.resize(std::distance(tmp.begin(), it));
 
-    //Eigen::VectorXi Vb((int)tmp.size());
-    Vb.resize((int)tmp.size());
-    for(int i = 0; i < tmp.size();i++) Vb(i) = tmp[i];
+    //Eigen::VectorXi Ib((int)tmp.size());
+    Ib.resize((int)tmp.size());
+    for(int i = 0; i < tmp.size();i++) Ib(i) = tmp[i];
+    //std::cout<<Ib.rows()<<std::endl;
+    //std::cout<<Ib<<std::endl;
 
     Fb.resize(F.rows(), F.cols());
 
@@ -386,9 +393,9 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
         {
             int idx = F(i, j);
             int pos = -1;
-            for(int k = 0; k < Vb.rows(); k++)
+            for(int k = 0; k < Ib.rows(); k++)
             {
-                if(Vb(k) == idx)
+                if(Ib(k) == idx)
                 {
                     Fb(i, j) = k;
                     break;
@@ -397,8 +404,9 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
             
         }
     }
-
-    //std::cout<<Vb.rows()<<std::endl;
+    //std::cout<<std::endl;
+    //std::cout<<Fb<<std::endl;
+    //std::cout<<Ib.rows()<<std::endl;
     //std::cout<<V.rows()<<std::endl;
     //for(int i = 0; i < tmp.size(); i++) std::cout<<tmp[i]<<" ";
     //std::cout<<std::endl;
@@ -407,6 +415,10 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
 
     //setup simulation 
     init_state(q,qdot,V);
+
+    /*Eigen::MatrixXd Nor;
+    compute_normals(Nor, q, Ib, Fb);
+    std::cout<<Nor<<std::endl;*/
 
     //add geometry to scene
     Visualize::add_object_to_scene(V,F, V_skin, F_skin, N, Eigen::RowVector3d(244,165,130)/255.);

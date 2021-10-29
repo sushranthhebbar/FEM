@@ -421,4 +421,45 @@ CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.o: \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/shared/include/EigenTypes.h
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/shared/include/EigenTypes.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/per_vertex_normals.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/igl_inline.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/Core \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/per_vertex_normals.cpp \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/per_vertex_normals.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/get_seconds.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/get_seconds.cpp \
+ /usr/include/c++/9/chrono /usr/include/c++/9/ratio \
+ /usr/include/c++/9/ctime /usr/include/c++/9/bits/parse_numbers.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/per_face_normals.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/per_face_normals.cpp \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/Geometry \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/doublearea.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/doublearea.cpp \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/edge_lengths.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/edge_lengths.cpp \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/squared_edge_lengths.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/squared_edge_lengths.cpp \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/parallel_for.h \
+ /usr/include/c++/9/thread /usr/include/c++/9/memory \
+ /usr/include/c++/9/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/9/ext/concurrence.h \
+ /usr/include/c++/9/bits/unique_ptr.h \
+ /usr/include/c++/9/bits/shared_ptr.h \
+ /usr/include/c++/9/bits/shared_ptr_base.h \
+ /usr/include/c++/9/bits/allocated_ptr.h \
+ /usr/include/c++/9/bits/shared_ptr_atomic.h \
+ /usr/include/c++/9/bits/atomic_base.h \
+ /usr/include/c++/9/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/9/backward/auto_ptr.h /usr/include/c++/9/iostream \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/sort.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/sort.cpp \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/SortableRow.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/reorder.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/reorder.cpp \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/IndexComparison.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/colon.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/colon.cpp \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/LinSpaced.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/internal_angles.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/internal_angles.cpp
