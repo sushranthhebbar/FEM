@@ -184,6 +184,7 @@ inline void assignment_setup(Eigen::VectorXd &q, Eigen::VectorXd &qdot) {
 #include <linearly_implicit_euler.h>
 #include <implicit_euler.h>
 #include <build_skinning_matrix.h>
+#include <compute_normals.h>
 
 //Variable for geometry
 Eigen::MatrixXd V; //vertices of simulation mesh 
@@ -270,9 +271,10 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
     auto force = [&](Eigen::VectorXd &f, Eigen::Ref<const Eigen::VectorXd> q2, Eigen::Ref<const Eigen::VectorXd> qdot2) { 
         
             assemble_forces(f, P.transpose()*q2+x0, P.transpose()*qdot2, V, T, v0, C,D);
-            Eigen::VectorXd H(3), N(3);
+            Eigen::VectorXd H(3);
             H << 0.0, 5000000.0, 0.0;
-            N << 0.0, 1.0, 0.0;
+            Eigen::MatrixXd N;
+            compute_normals(N, q, Vb, Fb);
             // between 10^5 and 10^7(too high blows up)
             for(unsigned int pickedi = 0; pickedi < spring_points.size(); pickedi++) {
                 dV_spring_particle_particle_dq(dV_mouse, spring_points[pickedi].first, (P.transpose()*q2+x0).segment<3>(spring_points[pickedi].second), 0.0, k_selected_now);
@@ -282,7 +284,7 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                 for(int i = 0; i < Vb.rows(); i++){
                     //f.segment<3>(3 * Vb(i)) -= Eigen::Vector3d(0.0, 10000.0, 0.0);
                     double c = (0.5 * mew * k * H.transpose() * H);
-                    f.segment<3>(3 * Vb(i)) += c * N;
+                    //f.segment<3>(3 * Vb(i)) += c * N(i);
                 }
             }
             f = P*f; 

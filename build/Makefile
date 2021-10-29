@@ -432,6 +432,30 @@ src/build_skinning_matrix.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/build_skinning_matrix.cpp.s
 .PHONY : src/build_skinning_matrix.cpp.s
 
+src/compute_normals.o: src/compute_normals.cpp.o
+.PHONY : src/compute_normals.o
+
+# target to build an object file
+src/compute_normals.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.o
+.PHONY : src/compute_normals.cpp.o
+
+src/compute_normals.i: src/compute_normals.cpp.i
+.PHONY : src/compute_normals.i
+
+# target to preprocess a source file
+src/compute_normals.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.i
+.PHONY : src/compute_normals.cpp.i
+
+src/compute_normals.s: src/compute_normals.cpp.s
+.PHONY : src/compute_normals.s
+
+# target to generate assembly for a file
+src/compute_normals.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.s
+.PHONY : src/compute_normals.cpp.s
+
 src/d2V_linear_tetrahedron_dq2.o: src/d2V_linear_tetrahedron_dq2.cpp.o
 .PHONY : src/d2V_linear_tetrahedron_dq2.o
 
@@ -765,6 +789,9 @@ help:
 	@echo "... src/build_skinning_matrix.o"
 	@echo "... src/build_skinning_matrix.i"
 	@echo "... src/build_skinning_matrix.s"
+	@echo "... src/compute_normals.o"
+	@echo "... src/compute_normals.i"
+	@echo "... src/compute_normals.s"
 	@echo "... src/d2V_linear_tetrahedron_dq2.o"
 	@echo "... src/d2V_linear_tetrahedron_dq2.i"
 	@echo "... src/d2V_linear_tetrahedron_dq2.s"

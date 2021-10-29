@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/a3-finite-elements-3d.dir/src/assemble_stiffness.cpp.o.d"
   "CMakeFiles/a3-finite-elements-3d.dir/src/build_skinning_matrix.cpp.o"
   "CMakeFiles/a3-finite-elements-3d.dir/src/build_skinning_matrix.cpp.o.d"
+  "CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.o"
+  "CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.o.d"
   "CMakeFiles/a3-finite-elements-3d.dir/src/d2V_linear_tetrahedron_dq2.cpp.o"
   "CMakeFiles/a3-finite-elements-3d.dir/src/d2V_linear_tetrahedron_dq2.cpp.o.d"
   "CMakeFiles/a3-finite-elements-3d.dir/src/d2psi_neo_hookean_dF2.cpp.o"

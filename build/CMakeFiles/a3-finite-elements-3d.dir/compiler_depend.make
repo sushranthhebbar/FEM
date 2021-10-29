@@ -768,7 +768,8 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: ../main.cpp \
   ../extern/libigl/external/eigen/Eigen/SparseCholesky \
   ../include/implicit_euler.h \
   ../include/newtons_method.h \
-  ../include/build_skinning_matrix.h
+  ../include/build_skinning_matrix.h \
+  ../include/compute_normals.h
 
 CMakeFiles/a3-finite-elements-3d.dir/shared/src/find_min_vertices.cpp.o: ../shared/src/find_min_vertices.cpp \
   /usr/include/stdc-predef.h \
@@ -11455,6 +11456,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 ../extern/libigl/include/igl/trackball.h:
 
 ../extern/libigl/include/igl/EPS.h:
+
+../include/compute_normals.h:
 
 ../extern/libigl/include/igl/axis_angle_to_quat.cpp:
 
