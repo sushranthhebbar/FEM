@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/glad/include
 
-C_FLAGS =  -fPIC -O3 -DNDEBUG -fPIC
+C_FLAGS =  -fPIC -fPIC
 

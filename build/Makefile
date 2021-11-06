@@ -624,6 +624,30 @@ src/fixed_point_constraints.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/fixed_point_constraints.cpp.s
 .PHONY : src/fixed_point_constraints.cpp.s
 
+src/levelset.o: src/levelset.cpp.o
+.PHONY : src/levelset.o
+
+# target to build an object file
+src/levelset.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/levelset.cpp.o
+.PHONY : src/levelset.cpp.o
+
+src/levelset.i: src/levelset.cpp.i
+.PHONY : src/levelset.i
+
+# target to preprocess a source file
+src/levelset.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/levelset.cpp.i
+.PHONY : src/levelset.cpp.i
+
+src/levelset.s: src/levelset.cpp.s
+.PHONY : src/levelset.s
+
+# target to generate assembly for a file
+src/levelset.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/levelset.cpp.s
+.PHONY : src/levelset.cpp.s
+
 src/mass_matrix_linear_tetrahedron.o: src/mass_matrix_linear_tetrahedron.cpp.o
 .PHONY : src/mass_matrix_linear_tetrahedron.o
 
@@ -813,6 +837,9 @@ help:
 	@echo "... src/fixed_point_constraints.o"
 	@echo "... src/fixed_point_constraints.i"
 	@echo "... src/fixed_point_constraints.s"
+	@echo "... src/levelset.o"
+	@echo "... src/levelset.i"
+	@echo "... src/levelset.s"
 	@echo "... src/mass_matrix_linear_tetrahedron.o"
 	@echo "... src/mass_matrix_linear_tetrahedron.i"
 	@echo "... src/mass_matrix_linear_tetrahedron.s"

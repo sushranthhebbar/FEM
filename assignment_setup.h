@@ -185,6 +185,7 @@ inline void assignment_setup(Eigen::VectorXd &q, Eigen::VectorXd &qdot) {
 #include <implicit_euler.h>
 #include <build_skinning_matrix.h>
 #include <compute_normals.h>
+#include <levelset.h>
 
 //Variable for geometry
 Eigen::MatrixXd V; //vertices of simulation mesh 
@@ -208,7 +209,8 @@ double C = 0.5*YM/(2.0*(1.0+mu));
 double pi = 3.1415;
 double mew = 4 * pi * 1e-7;
 double k = 0.33; 
-
+double cell_width = 0.0;
+double grid_length = 32;
 //BC
 std::vector<unsigned int> fixed_point_indices;
 Eigen::SparseMatrixd P;
@@ -278,7 +280,11 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
             }
             if(magnet){
                 Eigen::VectorXd H(3), nan(3);
-                H << 0.0, 5000000.0, 0.0;
+                Eigen::Vector3d corner = V.colwise().minCoeff();
+                Eigen::VectorXd phi(32 * 32 * 32);
+                //levelset(phi, corner, cell_width, grid_length, Ib, q);
+                //H << 0.0, 5000000.0, 0.0;// bunny
+                H << 0.0, 10000.0, 0.0;// arma
                 Eigen::MatrixXd Nor;
                 Nor.resize(Fb.rows(), Fb.cols());
                 compute_normals(Nor, q, Ib, Fb);
@@ -404,6 +410,11 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
             
         }
     }
+    Eigen::Vector3d mi = V.colwise().minCoeff();
+    Eigen::Vector3d mx = V.colwise().maxCoeff();
+    double length = std::max(abs(mi(0) - mx(0)), std::max(abs(mi(1) - mx(1)), abs(mi(2) - mx(2))));
+    length = round(length) + grid_length;
+    cell_width = length / grid_length;
     //std::cout<<std::endl;
     //std::cout<<Fb<<std::endl;
     //std::cout<<Ib.rows()<<std::endl;

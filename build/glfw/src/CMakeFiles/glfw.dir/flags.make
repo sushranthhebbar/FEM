@@ -6,7 +6,7 @@ C_DEFINES = -D_GLFW_USE_CONFIG_H
 
 C_INCLUDES = -I/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/glfw/include -I/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/glfw/src -I/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/glfw/src
 
-C_FLAGS =  -fPIC -O3 -DNDEBUG -fPIC -Wall
+C_FLAGS =  -fPIC -fPIC -Wall
 
 # Custom flags: glfw/src/CMakeFiles/glfw.dir/context.c.o_FLAGS = -Wdeclaration-after-statement
 
