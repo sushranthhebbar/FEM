@@ -186,6 +186,7 @@ inline void assignment_setup(Eigen::VectorXd &q, Eigen::VectorXd &qdot) {
 #include <build_skinning_matrix.h>
 #include <compute_normals.h>
 #include <levelset.h>
+#include <heaviside.h>
 
 //Variable for geometry
 Eigen::MatrixXd V; //vertices of simulation mesh 
@@ -211,6 +212,7 @@ double mew = 4 * pi * 1e-7;
 double k = 0.33; 
 double cell_width = 0.0;
 double grid_length = 32;
+double epsilon = 0.0;
 //BC
 std::vector<unsigned int> fixed_point_indices;
 Eigen::SparseMatrixd P;
@@ -282,7 +284,10 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                 Eigen::VectorXd H(3), nan(3);
                 Eigen::Vector3d corner = V.colwise().minCoeff();
                 Eigen::VectorXd phi(32 * 32 * 32);
+                Eigen::VectorXd theta;
                 levelset(phi, corner, cell_width, grid_length, Ib, q);
+                epsilon = cell_width / 2;
+                heaviside(theta, phi, epsilon);
                 if(bunny){
                     H << 0.0, 5000000.0, 0.0;// bunny
                 }

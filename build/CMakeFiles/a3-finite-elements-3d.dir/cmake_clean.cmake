@@ -37,6 +37,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/a3-finite-elements-3d.dir/src/dpsi_neo_hookean_dF.cpp.o.d"
   "CMakeFiles/a3-finite-elements-3d.dir/src/fixed_point_constraints.cpp.o"
   "CMakeFiles/a3-finite-elements-3d.dir/src/fixed_point_constraints.cpp.o.d"
+  "CMakeFiles/a3-finite-elements-3d.dir/src/heaviside.cpp.o"
+  "CMakeFiles/a3-finite-elements-3d.dir/src/heaviside.cpp.o.d"
   "CMakeFiles/a3-finite-elements-3d.dir/src/levelset.cpp.o"
   "CMakeFiles/a3-finite-elements-3d.dir/src/levelset.cpp.o.d"
   "CMakeFiles/a3-finite-elements-3d.dir/src/mass_matrix_linear_tetrahedron.cpp.o"

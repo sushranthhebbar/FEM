@@ -624,6 +624,30 @@ src/fixed_point_constraints.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/fixed_point_constraints.cpp.s
 .PHONY : src/fixed_point_constraints.cpp.s
 
+src/heaviside.o: src/heaviside.cpp.o
+.PHONY : src/heaviside.o
+
+# target to build an object file
+src/heaviside.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/heaviside.cpp.o
+.PHONY : src/heaviside.cpp.o
+
+src/heaviside.i: src/heaviside.cpp.i
+.PHONY : src/heaviside.i
+
+# target to preprocess a source file
+src/heaviside.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/heaviside.cpp.i
+.PHONY : src/heaviside.cpp.i
+
+src/heaviside.s: src/heaviside.cpp.s
+.PHONY : src/heaviside.s
+
+# target to generate assembly for a file
+src/heaviside.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/heaviside.cpp.s
+.PHONY : src/heaviside.cpp.s
+
 src/levelset.o: src/levelset.cpp.o
 .PHONY : src/levelset.o
 
@@ -837,6 +861,9 @@ help:
 	@echo "... src/fixed_point_constraints.o"
 	@echo "... src/fixed_point_constraints.i"
 	@echo "... src/fixed_point_constraints.s"
+	@echo "... src/heaviside.o"
+	@echo "... src/heaviside.i"
+	@echo "... src/heaviside.s"
 	@echo "... src/levelset.o"
 	@echo "... src/levelset.i"
 	@echo "... src/levelset.s"
