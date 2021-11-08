@@ -34,6 +34,7 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: ../main.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -132,8 +133,11 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: ../main.cpp \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
@@ -143,6 +147,8 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: ../main.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -218,6 +224,7 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: ../main.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/bits/sstream.tcc \
   ../extern/libigl/external/eigen/Eigen/src/Core/util/MKL_support.h \
@@ -234,6 +241,8 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -261,6 +270,7 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: ../main.cpp \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -800,6 +810,7 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/find_min_vertices.cpp.o: ../shar
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -824,13 +835,16 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/find_min_vertices.cpp.o: ../shar
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -847,6 +861,7 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/find_min_vertices.cpp.o: ../shar
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -922,6 +937,8 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/find_min_vertices.cpp.o: ../shar
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -973,6 +990,8 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/find_min_vertices.cpp.o: ../shar
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -1003,6 +1022,7 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/find_min_vertices.cpp.o: ../shar
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -1192,6 +1212,7 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/init_state.cpp.o: ../shared/src/
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -1216,13 +1237,16 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/init_state.cpp.o: ../shared/src/
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -1239,6 +1263,7 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/init_state.cpp.o: ../shared/src/
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -1314,6 +1339,8 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/init_state.cpp.o: ../shared/src/
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -1365,6 +1392,8 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/init_state.cpp.o: ../shared/src/
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -1395,6 +1424,7 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/init_state.cpp.o: ../shared/src/
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -1658,6 +1688,7 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/read_tetgen.cpp.o: ../shared/src
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -1682,13 +1713,16 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/read_tetgen.cpp.o: ../shared/src
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -1705,6 +1739,7 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/read_tetgen.cpp.o: ../shared/src
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -1780,6 +1815,8 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/read_tetgen.cpp.o: ../shared/src
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -1831,6 +1868,8 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/read_tetgen.cpp.o: ../shared/src
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -1861,6 +1900,7 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/read_tetgen.cpp.o: ../shared/src
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -2131,6 +2171,7 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/visualization.cpp.o: ../shared/s
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -2155,13 +2196,16 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/visualization.cpp.o: ../shared/s
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -2178,6 +2222,7 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/visualization.cpp.o: ../shared/s
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -2253,6 +2298,8 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/visualization.cpp.o: ../shared/s
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -2304,6 +2351,8 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/visualization.cpp.o: ../shared/s
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -2334,6 +2383,7 @@ CMakeFiles/a3-finite-elements-3d.dir/shared/src/visualization.cpp.o: ../shared/s
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -2828,6 +2878,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/T_linear_tetrahedron.cpp.o: ../src/T_li
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -2852,13 +2903,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/T_linear_tetrahedron.cpp.o: ../src/T_li
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -2875,6 +2929,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/T_linear_tetrahedron.cpp.o: ../src/T_li
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -2950,6 +3005,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/T_linear_tetrahedron.cpp.o: ../src/T_li
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -3001,6 +3058,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/T_linear_tetrahedron.cpp.o: ../src/T_li
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -3031,6 +3090,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/T_linear_tetrahedron.cpp.o: ../src/T_li
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -3296,6 +3356,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/V_linear_tetrahedron.cpp.o: ../src/V_li
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -3320,13 +3381,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/V_linear_tetrahedron.cpp.o: ../src/V_li
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -3343,6 +3407,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/V_linear_tetrahedron.cpp.o: ../src/V_li
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -3418,6 +3483,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/V_linear_tetrahedron.cpp.o: ../src/V_li
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -3469,6 +3536,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/V_linear_tetrahedron.cpp.o: ../src/V_li
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -3499,6 +3568,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/V_linear_tetrahedron.cpp.o: ../src/V_li
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -3765,6 +3835,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/V_spring_particle_particle.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -3789,13 +3860,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/V_spring_particle_particle.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -3812,6 +3886,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/V_spring_particle_particle.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -3887,6 +3962,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/V_spring_particle_particle.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -3938,6 +4015,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/V_spring_particle_particle.cpp.o: ../sr
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -3968,6 +4047,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/V_spring_particle_particle.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -4151,6 +4231,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/assemble_forces.cpp.o: ../src/assemble_
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -4175,13 +4256,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/assemble_forces.cpp.o: ../src/assemble_
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -4198,6 +4282,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/assemble_forces.cpp.o: ../src/assemble_
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -4273,6 +4358,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/assemble_forces.cpp.o: ../src/assemble_
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -4324,6 +4411,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/assemble_forces.cpp.o: ../src/assemble_
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -4354,6 +4443,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/assemble_forces.cpp.o: ../src/assemble_
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -4619,6 +4709,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/assemble_stiffness.cpp.o: ../src/assemb
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -4643,13 +4734,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/assemble_stiffness.cpp.o: ../src/assemb
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -4666,6 +4760,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/assemble_stiffness.cpp.o: ../src/assemb
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -4741,6 +4836,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/assemble_stiffness.cpp.o: ../src/assemb
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -4792,6 +4889,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/assemble_stiffness.cpp.o: ../src/assemb
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -4822,6 +4921,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/assemble_stiffness.cpp.o: ../src/assemb
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -5086,6 +5186,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/build_skinning_matrix.cpp.o: ../src/bui
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -5110,13 +5211,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/build_skinning_matrix.cpp.o: ../src/bui
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -5133,6 +5237,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/build_skinning_matrix.cpp.o: ../src/bui
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -5208,6 +5313,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/build_skinning_matrix.cpp.o: ../src/bui
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -5259,6 +5366,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/build_skinning_matrix.cpp.o: ../src/bui
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -5289,6 +5398,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/build_skinning_matrix.cpp.o: ../src/bui
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -5555,6 +5665,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.o: ../src/compute_n
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -5579,13 +5690,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.o: ../src/compute_n
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -5602,6 +5716,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.o: ../src/compute_n
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -5677,6 +5792,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.o: ../src/compute_n
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -5728,6 +5845,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.o: ../src/compute_n
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -5758,6 +5877,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.o: ../src/compute_n
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -6066,6 +6186,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/d2V_linear_tetrahedron_dq2.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -6090,13 +6211,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/d2V_linear_tetrahedron_dq2.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -6113,6 +6237,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/d2V_linear_tetrahedron_dq2.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -6188,6 +6313,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/d2V_linear_tetrahedron_dq2.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -6239,6 +6366,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/d2V_linear_tetrahedron_dq2.cpp.o: ../sr
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -6269,6 +6398,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/d2V_linear_tetrahedron_dq2.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -6535,6 +6665,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/d2psi_neo_hookean_dF2.cpp.o: ../src/d2p
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -6559,13 +6690,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/d2psi_neo_hookean_dF2.cpp.o: ../src/d2p
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -6582,6 +6716,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/d2psi_neo_hookean_dF2.cpp.o: ../src/d2p
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -6657,6 +6792,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/d2psi_neo_hookean_dF2.cpp.o: ../src/d2p
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -6708,6 +6845,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/d2psi_neo_hookean_dF2.cpp.o: ../src/d2p
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -6738,6 +6877,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/d2psi_neo_hookean_dF2.cpp.o: ../src/d2p
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -7001,6 +7141,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dV_linear_tetrahedron_dq.cpp.o: ../src/
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -7025,13 +7166,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dV_linear_tetrahedron_dq.cpp.o: ../src/
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -7048,6 +7192,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dV_linear_tetrahedron_dq.cpp.o: ../src/
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -7123,6 +7268,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dV_linear_tetrahedron_dq.cpp.o: ../src/
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -7174,6 +7321,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dV_linear_tetrahedron_dq.cpp.o: ../src/
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -7204,6 +7353,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dV_linear_tetrahedron_dq.cpp.o: ../src/
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -7471,6 +7621,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dV_spring_particle_particle_dq.cpp.o: .
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -7495,13 +7646,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dV_spring_particle_particle_dq.cpp.o: .
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -7518,6 +7672,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dV_spring_particle_particle_dq.cpp.o: .
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -7593,6 +7748,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dV_spring_particle_particle_dq.cpp.o: .
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -7644,6 +7801,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dV_spring_particle_particle_dq.cpp.o: .
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -7674,6 +7833,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dV_spring_particle_particle_dq.cpp.o: .
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -7937,6 +8097,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dphi_linear_tetrahedron_dX.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -7961,13 +8122,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dphi_linear_tetrahedron_dX.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -7984,6 +8148,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dphi_linear_tetrahedron_dX.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -8059,6 +8224,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dphi_linear_tetrahedron_dX.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -8110,6 +8277,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dphi_linear_tetrahedron_dX.cpp.o: ../sr
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -8140,6 +8309,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dphi_linear_tetrahedron_dX.cpp.o: ../sr
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -8405,6 +8575,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dpsi_neo_hookean_dF.cpp.o: ../src/dpsi_
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -8429,13 +8600,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dpsi_neo_hookean_dF.cpp.o: ../src/dpsi_
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -8452,6 +8626,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dpsi_neo_hookean_dF.cpp.o: ../src/dpsi_
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -8527,6 +8702,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dpsi_neo_hookean_dF.cpp.o: ../src/dpsi_
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -8578,6 +8755,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dpsi_neo_hookean_dF.cpp.o: ../src/dpsi_
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -8608,6 +8787,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/dpsi_neo_hookean_dF.cpp.o: ../src/dpsi_
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -8871,6 +9051,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/fixed_point_constraints.cpp.o: ../src/f
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -8895,13 +9076,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/fixed_point_constraints.cpp.o: ../src/f
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -8918,6 +9102,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/fixed_point_constraints.cpp.o: ../src/f
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -8993,6 +9178,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/fixed_point_constraints.cpp.o: ../src/f
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -9044,6 +9231,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/fixed_point_constraints.cpp.o: ../src/f
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -9074,6 +9263,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/fixed_point_constraints.cpp.o: ../src/f
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -9337,6 +9527,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/levelset.cpp.o: ../src/levelset.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -9361,13 +9552,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/levelset.cpp.o: ../src/levelset.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -9384,6 +9578,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/levelset.cpp.o: ../src/levelset.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -9459,6 +9654,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/levelset.cpp.o: ../src/levelset.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -9510,6 +9707,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/levelset.cpp.o: ../src/levelset.cpp \
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -9540,6 +9739,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/levelset.cpp.o: ../src/levelset.cpp \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -9805,6 +10005,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/mass_matrix_linear_tetrahedron.cpp.o: .
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -9829,13 +10030,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/mass_matrix_linear_tetrahedron.cpp.o: .
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -9852,6 +10056,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/mass_matrix_linear_tetrahedron.cpp.o: .
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -9927,6 +10132,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/mass_matrix_linear_tetrahedron.cpp.o: .
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -9978,6 +10185,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/mass_matrix_linear_tetrahedron.cpp.o: .
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -10008,6 +10217,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/mass_matrix_linear_tetrahedron.cpp.o: .
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -10271,6 +10481,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/mass_matrix_mesh.cpp.o: ../src/mass_mat
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -10295,13 +10506,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/mass_matrix_mesh.cpp.o: ../src/mass_mat
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -10318,6 +10532,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/mass_matrix_mesh.cpp.o: ../src/mass_mat
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -10393,6 +10608,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/mass_matrix_mesh.cpp.o: ../src/mass_mat
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -10444,6 +10661,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/mass_matrix_mesh.cpp.o: ../src/mass_mat
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -10474,6 +10693,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/mass_matrix_mesh.cpp.o: ../src/mass_mat
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -10738,6 +10958,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/phi_linear_tetrahedron.cpp.o: ../src/ph
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -10762,13 +10983,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/phi_linear_tetrahedron.cpp.o: ../src/ph
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -10785,6 +11009,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/phi_linear_tetrahedron.cpp.o: ../src/ph
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -10860,6 +11085,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/phi_linear_tetrahedron.cpp.o: ../src/ph
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -10911,6 +11138,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/phi_linear_tetrahedron.cpp.o: ../src/ph
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -10941,6 +11170,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/phi_linear_tetrahedron.cpp.o: ../src/ph
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -11243,6 +11473,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/pick_nearest_vertices.cpp.o: ../src/pic
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
@@ -11266,13 +11497,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/pick_nearest_vertices.cpp.o: ../src/pic
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -11288,6 +11522,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/pick_nearest_vertices.cpp.o: ../src/pic
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/bits/char_traits.h \
   /usr/include/c++/9/cstdint \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h \
@@ -11333,6 +11568,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/pick_nearest_vertices.cpp.o: ../src/pic
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -11383,6 +11620,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/pick_nearest_vertices.cpp.o: ../src/pic
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -11412,6 +11651,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/pick_nearest_vertices.cpp.o: ../src/pic
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -11684,6 +11924,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
@@ -11708,13 +11949,16 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/ios \
@@ -11731,6 +11975,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_ptr.h \
@@ -11806,6 +12051,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -11857,6 +12104,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/limits \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
@@ -11887,6 +12136,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/NumTraits.h \
   ../extern/libigl/external/eigen/Eigen/src/Core/MathFunctions.h \
@@ -12288,8 +12538,6 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 ../extern/libigl/include/igl/doublearea.h:
 
-../extern/libigl/include/igl/per_vertex_normals.cpp:
-
 ../extern/libigl/include/igl/per_vertex_normals.h:
 
 ../extern/libigl/include/igl/jet.cpp:
@@ -12358,9 +12606,13 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 ../extern/libigl/include/igl/find.h:
 
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+/usr/include/x86_64-linux-gnu/bits/dirent.h:
 
-../extern/libigl/external/eigen/Eigen/src/Core/util/Constants.h:
+/usr/include/dirent.h:
+
+../extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/RandomSetter.h:
+
+../extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/BlockOfDynamicSparseMatrix.h:
 
 /usr/include/c++/9/bits/uniform_int_dist.h:
 
@@ -12380,19 +12632,15 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 /usr/include/c++/9/string:
 
-/usr/include/string.h:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
 
-../extern/libigl/include/igl/barycenter.cpp:
+../extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/MarketIO.h:
 
-../extern/libigl/external/eigen/Eigen/src/Core/Swap.h:
+/usr/include/c++/9/cstring:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
 ../extern/libigl/external/eigen/Eigen/src/SparseLU/SparseLU.h:
-
-/usr/include/c++/9/cstring:
-
-../extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/MarketIO.h:
 
 /usr/include/c++/9/functional:
 
@@ -12416,9 +12664,11 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 /usr/include/c++/9/typeinfo:
 
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+../extern/libigl/include/igl/per_vertex_normals.cpp:
 
-/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+/usr/include/x86_64-linux-gnu/bits/mathinline.h:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
@@ -12536,7 +12786,9 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/mmintrin.h:
 
-../extern/libigl/external/eigen/Eigen/src/Core/util/Meta.h:
+../extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/MatrixMarketIterator.h:
+
+/usr/include/c++/9/cstddef:
 
 ../extern/libigl/external/eigen/Eigen/src/Core/PermutationMatrix.h:
 
@@ -12562,13 +12814,35 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+/usr/include/string.h:
+
+../extern/libigl/include/igl/barycenter.cpp:
+
+../extern/libigl/external/eigen/Eigen/src/Core/Swap.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/include/c++/9/bits/uses_allocator.h:
+
+../extern/libigl/external/eigen/Eigen/src/SparseCore/SparseTranspose.h:
+
 ../extern/libigl/external/eigen/Eigen/src/Core/util/Macros.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/select2.h:
+
 ../extern/libigl/external/eigen/Eigen/Core:
 
 /usr/include/c++/9/bits/shared_ptr_atomic.h:
+
+../extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/DynamicSparseMatrix.h:
+
+../extern/libigl/include/igl/readMESH.h:
+
+/usr/include/c++/9/bits/stl_iterator_base_funcs.h:
 
 ../extern/libigl/external/eigen/Eigen/src/Geometry/Umeyama.h:
 
@@ -12589,22 +12863,6 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 ../shared/include/find_min_vertices.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-../extern/libigl/external/eigen/Eigen/SparseCore:
-
-/usr/include/c++/9/bits/predefined_ops.h:
-
-/usr/include/c++/9/cctype:
-
-../extern/libigl/include/igl/max_size.cpp:
-
-/usr/include/c++/9/bits/shared_ptr_base.h:
-
-../extern/libigl/include/igl/SortableRow.h:
-
-/usr/include/c++/9/bits/stl_algo.h:
 
 /usr/include/c++/9/type_traits:
 
@@ -12637,6 +12895,14 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 /usr/include/c++/9/bits/exception_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+../extern/libigl/external/eigen/Eigen/SparseCore:
 
 /usr/include/c++/9/bits/allocator.h:
 
@@ -12676,6 +12942,10 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 /usr/include/c++/9/iomanip:
 
+/usr/include/x86_64-linux-gnu/bits/dirent_ext.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
 /usr/include/c++/9/bits/exception_ptr.h:
 
 ../extern/libigl/include/igl/opengl/glfw/imgui/ImGuiTraits.h:
@@ -12691,6 +12961,10 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 /usr/include/ctype.h:
 
 /usr/include/c++/9/bits/exception.h:
+
+/usr/include/c++/9/ios:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
 /usr/include/c++/9/bits/basic_string.h:
 
@@ -12714,11 +12988,11 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 ../extern/libigl/external/eigen/Eigen/src/Geometry/RotationBase.h:
 
-/usr/include/unistd.h:
-
-../extern/libigl/external/eigen/Eigen/src/SparseCore/SparseColEtree.h:
-
 /usr/include/x86_64-linux-gnu/sys/select.h:
+
+../extern/libigl/include/igl/slice.cpp:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
@@ -12782,10 +13056,6 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 /usr/include/c++/9/ext/concurrence.h:
 
-../extern/libigl/include/igl/opengl/ViewerData.cpp:
-
-../extern/libigl/external/eigen/Eigen/src/Core/util/StaticAssert.h:
-
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 ../extern/libigl/include/igl/parula.h:
@@ -12802,9 +13072,9 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 /usr/include/c++/9/bits/ptr_traits.h:
 
-../extern/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h:
+/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
 
-/usr/include/c++/9/bits/stl_pair.h:
+/usr/include/c++/9/bits/locale_classes.h:
 
 ../src/assemble_stiffness.cpp:
 
@@ -12814,19 +13084,21 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
-/usr/include/c++/9/ios:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/c++/9/iosfwd:
 
-/usr/include/c++/9/cmath:
+../extern/libigl/external/eigen/Eigen/src/Core/util/Meta.h:
 
-../extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/RandomSetter.h:
+/usr/include/c++/9/bits/shared_ptr_base.h:
+
+/usr/include/c++/9/bits/stl_algo.h:
+
+../extern/libigl/include/igl/SortableRow.h:
+
+/usr/include/c++/9/cmath:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:
 
@@ -12856,10 +13128,6 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
-/usr/include/x86_64-linux-gnu/bits/dirent_ext.h:
-
 /usr/include/c++/9/new:
 
 /usr/include/c++/9/bits/locale_facets_nonio.h:
@@ -12883,6 +13151,12 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 ../extern/libigl/external/eigen/Eigen/src/LU/PartialPivLU.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/c++/9/bits/predefined_ops.h:
+
+/usr/include/c++/9/cctype:
+
+../extern/libigl/include/igl/max_size.cpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h:
 
@@ -13018,8 +13292,6 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_inline.h:
 
-/usr/include/c++/9/bits/locale_classes.h:
-
 /usr/include/c++/9/debug/assertions.h:
 
 ../extern/libigl/external/eigen/Eigen/src/Core/products/TriangularMatrixVector.h:
@@ -13056,6 +13328,22 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
+../extern/libigl/external/eigen/Eigen/src/Core/util/Constants.h:
+
+../extern/libigl/include/igl/opengl/ViewerData.cpp:
+
+../extern/libigl/external/eigen/Eigen/src/Core/util/StaticAssert.h:
+
+/usr/include/unistd.h:
+
+../extern/libigl/external/eigen/Eigen/src/SparseCore/SparseColEtree.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/c++/9/bits/stl_pair.h:
+
+../extern/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h:
+
 /usr/include/x86_64-linux-gnu/bits/confname.h:
 
 /usr/include/c++/9/bits/stl_algobase.h:
@@ -13068,11 +13356,15 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 ../extern/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_panel_bmod.h:
 
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
 /usr/include/c++/9/bits/istream.tcc:
 
 ../extern/libigl/external/eigen/Eigen/src/LU/Inverse.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd.h:
 
 ../extern/libigl/external/eigen/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h:
 
@@ -13103,6 +13395,8 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 ../extern/libigl/include/igl/opengl/ViewerData.h:
 
 ../extern/libigl/external/eigen/Eigen/src/Core/Fuzzy.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
 ../extern/libigl/external/eigen/Eigen/src/Core/DenseCoeffsBase.h:
 
@@ -13332,6 +13626,10 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 ../extern/libigl/external/eigen/Eigen/src/Geometry/Homogeneous.h:
 
+../extern/libigl/external/eigen/unsupported/Eigen/SparseExtra:
+
+../extern/libigl/external/eigen/Eigen/src/Geometry/Rotation2D.h:
+
 ../extern/libigl/include/igl/writeOBJ.h:
 
 ../extern/libigl/external/eigen/Eigen/src/Geometry/Translation.h:
@@ -13371,8 +13669,6 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 ../extern/libigl/external/eigen/Eigen/src/Core/GlobalFunctions.h:
 
 /usr/include/c++/9/bits/stl_multimap.h:
-
-/usr/include/dirent.h:
 
 ../extern/libigl/include/igl/deprecated.h:
 
@@ -13445,10 +13741,6 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 ../extern/libigl/external/eigen/Eigen/src/SparseCore/AmbiVector.h:
 
 ../extern/libigl/external/eigen/Eigen/src/SparseCore/SparseMatrix.h:
-
-/usr/include/c++/9/bits/uses_allocator.h:
-
-../extern/libigl/external/eigen/Eigen/src/SparseCore/SparseTranspose.h:
 
 ../extern/libigl/external/eigen/Eigen/src/SparseCore/SparseDot.h:
 
@@ -13548,28 +13840,6 @@ CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_h
 
 ../extern/libigl/include/igl/get_seconds.cpp:
 
-/usr/include/x86_64-linux-gnu/bits/dirent.h:
-
 ../extern/libigl/include/igl/accumarray.h:
 
 ../extern/libigl/include/igl/slice_mask.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
-../extern/libigl/include/igl/slice.cpp:
-
-../extern/libigl/external/eigen/Eigen/src/Geometry/Rotation2D.h:
-
-../extern/libigl/external/eigen/unsupported/Eigen/SparseExtra:
-
-../extern/libigl/include/igl/readMESH.h:
-
-/usr/include/c++/9/bits/stl_iterator_base_funcs.h:
-
-../extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/DynamicSparseMatrix.h:
-
-../extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/BlockOfDynamicSparseMatrix.h:
-
-/usr/include/c++/9/cstddef:
-
-../extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/MatrixMarketIterator.h:

@@ -282,9 +282,13 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                 Eigen::VectorXd H(3), nan(3);
                 Eigen::Vector3d corner = V.colwise().minCoeff();
                 Eigen::VectorXd phi(32 * 32 * 32);
-                //levelset(phi, corner, cell_width, grid_length, Ib, q);
-                //H << 0.0, 5000000.0, 0.0;// bunny
-                H << 0.0, 10000.0, 0.0;// arma
+                levelset(phi, corner, cell_width, grid_length, Ib, q);
+                if(bunny){
+                    H << 0.0, 5000000.0, 0.0;// bunny
+                }
+                else{
+                    H << 0.0, 10000.0, 0.0;// arma
+                }
                 Eigen::MatrixXd Nor;
                 Nor.resize(Fb.rows(), Fb.cols());
                 compute_normals(Nor, q, Ib, Fb);
@@ -415,7 +419,7 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     double length = std::max(abs(mi(0) - mx(0)), std::max(abs(mi(1) - mx(1)), abs(mi(2) - mx(2))));
     length = round(length) + grid_length;
     cell_width = length / grid_length;
-    //std::cout<<std::endl;
+    std::cout<<cell_width<<std::endl;
     //std::cout<<Fb<<std::endl;
     //std::cout<<Ib.rows()<<std::endl;
     //std::cout<<V.rows()<<std::endl;
