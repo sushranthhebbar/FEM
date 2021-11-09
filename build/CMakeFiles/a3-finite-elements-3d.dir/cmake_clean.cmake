@@ -49,6 +49,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/a3-finite-elements-3d.dir/src/phi_linear_tetrahedron.cpp.o.d"
   "CMakeFiles/a3-finite-elements-3d.dir/src/pick_nearest_vertices.cpp.o"
   "CMakeFiles/a3-finite-elements-3d.dir/src/pick_nearest_vertices.cpp.o.d"
+  "CMakeFiles/a3-finite-elements-3d.dir/src/poisson.cpp.o"
+  "CMakeFiles/a3-finite-elements-3d.dir/src/poisson.cpp.o.d"
   "CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o"
   "CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o.d"
   "a3-finite-elements-3d"

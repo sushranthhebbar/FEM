@@ -768,6 +768,30 @@ src/pick_nearest_vertices.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/pick_nearest_vertices.cpp.s
 .PHONY : src/pick_nearest_vertices.cpp.s
 
+src/poisson.o: src/poisson.cpp.o
+.PHONY : src/poisson.o
+
+# target to build an object file
+src/poisson.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/poisson.cpp.o
+.PHONY : src/poisson.cpp.o
+
+src/poisson.i: src/poisson.cpp.i
+.PHONY : src/poisson.i
+
+# target to preprocess a source file
+src/poisson.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/poisson.cpp.i
+.PHONY : src/poisson.cpp.i
+
+src/poisson.s: src/poisson.cpp.s
+.PHONY : src/poisson.s
+
+# target to generate assembly for a file
+src/poisson.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/poisson.cpp.s
+.PHONY : src/poisson.cpp.s
+
 src/psi_neo_hookean.o: src/psi_neo_hookean.cpp.o
 .PHONY : src/psi_neo_hookean.o
 
@@ -879,6 +903,9 @@ help:
 	@echo "... src/pick_nearest_vertices.o"
 	@echo "... src/pick_nearest_vertices.i"
 	@echo "... src/pick_nearest_vertices.s"
+	@echo "... src/poisson.o"
+	@echo "... src/poisson.i"
+	@echo "... src/poisson.s"
 	@echo "... src/psi_neo_hookean.o"
 	@echo "... src/psi_neo_hookean.i"
 	@echo "... src/psi_neo_hookean.s"
