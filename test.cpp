@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    Eigen::VectorXd vec1(3);
+    /*Eigen::VectorXd vec1(3);
     vec1 << 1, 0, 0;
 
     Eigen::VectorXd vec2(3);
@@ -32,9 +32,9 @@ int main()
     //cout<<m<<endl;
     //cout<<(m.inverse() * vec1)<<endl;
 
-    Eigen::Matrix43d dphi;
+    /*Eigen::Matrix43d dphi;
     Eigen::Vector3d one;
-    one << 1, 1, 1;
+    one << 1, 1, 1;*/
     //cout<<one.transpose()<<endl;
     //dphi << (one.transpose()) , m;
     //dphi << m;
@@ -60,7 +60,7 @@ int main()
     Eigen::Vector3d qi = q.segment<3>(2);
     cout<<qi<<endl;*/
     //cout<<A3<<endl;
-    Eigen::MatrixXd P, A, B, I;
+    /*Eigen::MatrixXd P, A, B, I;
     P.resize(4, 4);
     A.resize(2, 2);
     B.resize(2, 2);
@@ -69,7 +69,17 @@ int main()
     A = I / 60;
     B = I / 120;
     P << A, B, B, A;
-    cout<< 6 * P <<endl;
+    cout<< 6 * P <<endl;*/
+    Eigen:: VectorXd A(4), B(4), C(4);
+    A << 1, 0, 0, 0;
+    B << 0, 1, 0, 0;
+    C << 0, 0, 1, 0; 
 
+    Eigen::MatrixXd T;
+    T.resize(4, 3);
+    T.col(0) = A;
+    T.col(1) = B;
+    T.col(2) = C;
+    cout << T <<endl;
     return 0;
 }

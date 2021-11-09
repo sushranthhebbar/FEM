@@ -255,7 +255,8 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
         Eigen::VectorXd H(3), nan(3);
         Eigen::Vector3d corner = V.colwise().minCoeff();
         Eigen::VectorXd phi(32 * 32 * 32);
-        Eigen::VectorXd theta, potential;
+        Eigen::VectorXd theta;
+        Eigen::MatrixXd potential;
         levelset(phi, corner, cell_width, grid_length, Ib, q);
         epsilon = 3 * cell_width / 2;
         heaviside(theta, phi, epsilon);

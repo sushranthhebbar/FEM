@@ -408,6 +408,30 @@ src/build_skinning_matrix.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/build_skinning_matrix.cpp.s
 .PHONY : src/build_skinning_matrix.cpp.s
 
+src/compute_normals.o: src/compute_normals.cpp.o
+.PHONY : src/compute_normals.o
+
+# target to build an object file
+src/compute_normals.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.o
+.PHONY : src/compute_normals.cpp.o
+
+src/compute_normals.i: src/compute_normals.cpp.i
+.PHONY : src/compute_normals.i
+
+# target to preprocess a source file
+src/compute_normals.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.i
+.PHONY : src/compute_normals.cpp.i
+
+src/compute_normals.s: src/compute_normals.cpp.s
+.PHONY : src/compute_normals.s
+
+# target to generate assembly for a file
+src/compute_normals.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.s
+.PHONY : src/compute_normals.cpp.s
+
 src/d2V_linear_tetrahedron_dq2.o: src/d2V_linear_tetrahedron_dq2.cpp.o
 .PHONY : src/d2V_linear_tetrahedron_dq2.o
 
@@ -576,6 +600,54 @@ src/fixed_point_constraints.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/fixed_point_constraints.cpp.s
 .PHONY : src/fixed_point_constraints.cpp.s
 
+src/heaviside.o: src/heaviside.cpp.o
+.PHONY : src/heaviside.o
+
+# target to build an object file
+src/heaviside.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/heaviside.cpp.o
+.PHONY : src/heaviside.cpp.o
+
+src/heaviside.i: src/heaviside.cpp.i
+.PHONY : src/heaviside.i
+
+# target to preprocess a source file
+src/heaviside.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/heaviside.cpp.i
+.PHONY : src/heaviside.cpp.i
+
+src/heaviside.s: src/heaviside.cpp.s
+.PHONY : src/heaviside.s
+
+# target to generate assembly for a file
+src/heaviside.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/heaviside.cpp.s
+.PHONY : src/heaviside.cpp.s
+
+src/levelset.o: src/levelset.cpp.o
+.PHONY : src/levelset.o
+
+# target to build an object file
+src/levelset.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/levelset.cpp.o
+.PHONY : src/levelset.cpp.o
+
+src/levelset.i: src/levelset.cpp.i
+.PHONY : src/levelset.i
+
+# target to preprocess a source file
+src/levelset.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/levelset.cpp.i
+.PHONY : src/levelset.cpp.i
+
+src/levelset.s: src/levelset.cpp.s
+.PHONY : src/levelset.s
+
+# target to generate assembly for a file
+src/levelset.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/levelset.cpp.s
+.PHONY : src/levelset.cpp.s
+
 src/mass_matrix_linear_tetrahedron.o: src/mass_matrix_linear_tetrahedron.cpp.o
 .PHONY : src/mass_matrix_linear_tetrahedron.o
 
@@ -672,6 +744,30 @@ src/pick_nearest_vertices.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/pick_nearest_vertices.cpp.s
 .PHONY : src/pick_nearest_vertices.cpp.s
 
+src/poisson.o: src/poisson.cpp.o
+.PHONY : src/poisson.o
+
+# target to build an object file
+src/poisson.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/poisson.cpp.o
+.PHONY : src/poisson.cpp.o
+
+src/poisson.i: src/poisson.cpp.i
+.PHONY : src/poisson.i
+
+# target to preprocess a source file
+src/poisson.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/poisson.cpp.i
+.PHONY : src/poisson.cpp.i
+
+src/poisson.s: src/poisson.cpp.s
+.PHONY : src/poisson.s
+
+# target to generate assembly for a file
+src/poisson.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/poisson.cpp.s
+.PHONY : src/poisson.cpp.s
+
 src/psi_neo_hookean.o: src/psi_neo_hookean.cpp.o
 .PHONY : src/psi_neo_hookean.o
 
@@ -762,6 +858,9 @@ help:
 	@echo "... src/build_skinning_matrix.o"
 	@echo "... src/build_skinning_matrix.i"
 	@echo "... src/build_skinning_matrix.s"
+	@echo "... src/compute_normals.o"
+	@echo "... src/compute_normals.i"
+	@echo "... src/compute_normals.s"
 	@echo "... src/d2V_linear_tetrahedron_dq2.o"
 	@echo "... src/d2V_linear_tetrahedron_dq2.i"
 	@echo "... src/d2V_linear_tetrahedron_dq2.s"
@@ -783,6 +882,12 @@ help:
 	@echo "... src/fixed_point_constraints.o"
 	@echo "... src/fixed_point_constraints.i"
 	@echo "... src/fixed_point_constraints.s"
+	@echo "... src/heaviside.o"
+	@echo "... src/heaviside.i"
+	@echo "... src/heaviside.s"
+	@echo "... src/levelset.o"
+	@echo "... src/levelset.i"
+	@echo "... src/levelset.s"
 	@echo "... src/mass_matrix_linear_tetrahedron.o"
 	@echo "... src/mass_matrix_linear_tetrahedron.i"
 	@echo "... src/mass_matrix_linear_tetrahedron.s"
@@ -795,6 +900,9 @@ help:
 	@echo "... src/pick_nearest_vertices.o"
 	@echo "... src/pick_nearest_vertices.i"
 	@echo "... src/pick_nearest_vertices.s"
+	@echo "... src/poisson.o"
+	@echo "... src/poisson.i"
+	@echo "... src/poisson.s"
 	@echo "... src/psi_neo_hookean.o"
 	@echo "... src/psi_neo_hookean.i"
 	@echo "... src/psi_neo_hookean.s"
