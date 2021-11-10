@@ -672,6 +672,30 @@ src/heaviside.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/heaviside.cpp.s
 .PHONY : src/heaviside.cpp.s
 
+src/interpolate.o: src/interpolate.cpp.o
+.PHONY : src/interpolate.o
+
+# target to build an object file
+src/interpolate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/interpolate.cpp.o
+.PHONY : src/interpolate.cpp.o
+
+src/interpolate.i: src/interpolate.cpp.i
+.PHONY : src/interpolate.i
+
+# target to preprocess a source file
+src/interpolate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/interpolate.cpp.i
+.PHONY : src/interpolate.cpp.i
+
+src/interpolate.s: src/interpolate.cpp.s
+.PHONY : src/interpolate.s
+
+# target to generate assembly for a file
+src/interpolate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/interpolate.cpp.s
+.PHONY : src/interpolate.cpp.s
+
 src/levelset.o: src/levelset.cpp.o
 .PHONY : src/levelset.o
 
@@ -915,6 +939,9 @@ help:
 	@echo "... src/heaviside.o"
 	@echo "... src/heaviside.i"
 	@echo "... src/heaviside.s"
+	@echo "... src/interpolate.o"
+	@echo "... src/interpolate.i"
+	@echo "... src/interpolate.s"
 	@echo "... src/levelset.o"
 	@echo "... src/levelset.i"
 	@echo "... src/levelset.s"

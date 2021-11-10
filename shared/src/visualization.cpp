@@ -336,6 +336,19 @@ bool Visualize::plot_phase_space(const char *label, ImVec2 q_bounds, ImVec2 q_do
 
     }
 
+    void Visualize::add_boundary_box(const Eigen::MatrixXd &V_box, const Eigen::MatrixXi &E_box){
+        g_viewer.data().add_points(V_box,Eigen::RowVector3d(1,0,0));
+
+        // Plot the edges of the bounding box
+        for (unsigned i=0;i<E_box.rows(); ++i)
+            g_viewer.data().add_edges
+            (
+            V_box.row(E_box(i,0)),
+            V_box.row(E_box(i,1)),
+            Eigen::RowVector3d(1,0,0)
+            );
+    }
+
     void Visualize::rigid_transform_1d(unsigned int id, double x) {
         
         //reset vertex positions 

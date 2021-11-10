@@ -219,7 +219,8 @@ double epsilon = 0.0;
 std::vector<unsigned int> fixed_point_indices;
 Eigen::SparseMatrixd P;
 Eigen::VectorXd x0; 
-
+Eigen::Vector3d mi;
+Eigen::Vector3d mx;
 //mass matrix
 Eigen::SparseMatrixd M;
 Eigen::VectorXd v0;
@@ -235,6 +236,7 @@ bool skinning_on = true;
 bool fully_implicit = false;
 bool bunny = true; 
 bool magnet = false;
+bool box = false;
 
 //selection spring
 double k_selected = 1e5;
@@ -344,7 +346,6 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
     }
     
     Visualize::add_energy(t, KE, PE);
-        
 }
 
 inline void draw(Eigen::Ref<const Eigen::VectorXd> q, Eigen::Ref<const Eigen::VectorXd> qdot, double t) {
@@ -364,9 +365,13 @@ bool key_down_callback(igl::opengl::glfw::Viewer &viewer, unsigned char key, int
         skinning_on = !skinning_on;
         Visualize::toggle_skinning(skinning_on);
     }
-    else if(key=='B'){
+    else if(key=='M'){
         magnet = ! magnet;
         std::cout<<"magnet = "<<magnet<<"\n";
+    }
+
+    else if(key=='B'){
+        box = ! box;
     }
 
     return false;
@@ -428,8 +433,8 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
             
         }
     }
-    Eigen::Vector3d mi = V.colwise().minCoeff();
-    Eigen::Vector3d mx = V.colwise().maxCoeff();
+    mi = V.colwise().minCoeff();
+    mx = V.colwise().maxCoeff();
     double length = std::max(abs(mi(0) - mx(0)), std::max(abs(mi(1) - mx(1)), abs(mi(2) - mx(2))));
     length = round(length) + grid_length;
     cell_width = length / grid_length;
@@ -452,6 +457,35 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     //add geometry to scene
     Visualize::add_object_to_scene(V,F, V_skin, F_skin, N, Eigen::RowVector3d(244,165,130)/255.);
     Visualize::toggle_skinning(false);
+    
+    /*Eigen::MatrixXd V_box(8,3);
+    V_box <<
+    mi(0), mi(1), mi(2),
+    mx(0), mi(1), mi(2),
+    mx(0), mx(1), mi(2),
+    mi(0), mx(1), mi(2),
+    mi(0), mi(1), mx(2),
+    mx(0), mi(1), mx(2),
+    mx(0), mx(1), mx(2),
+    mi(0), mx(1), mx(2);
+
+    // Edges of the bounding box
+    Eigen::MatrixXi E_box(12,2);
+    E_box <<
+    0, 1,
+    1, 2,
+    2, 3,
+    3, 0,
+    4, 5,
+    5, 6,
+    6, 7,
+    7, 4,
+    0, 4,
+    1, 5,
+    2, 6,
+    7 ,3;
+
+    Visualize::add_boundary_box(V_box, E_box);*/
     
     //bunny
     if(bunny)
