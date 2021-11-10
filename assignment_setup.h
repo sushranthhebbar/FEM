@@ -189,6 +189,7 @@ inline void assignment_setup(Eigen::VectorXd &q, Eigen::VectorXd &qdot) {
 #include <heaviside.h>
 #include <poisson.h>
 #include <dH_Internal_field.h>
+#include <interpolate.h>
 
 //Variable for geometry
 Eigen::MatrixXd V; //vertices of simulation mesh 
@@ -251,11 +252,11 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
     Eigen::Vector3d mouse;
     Eigen::Vector6d dV_mouse;
     Eigen::MatrixXd Nor;
+    Eigen::VectorXd boundary_value, H(3);
     double k_selected_now = (Visualize::is_mouse_dragging() ? k_selected : 0.);
     double c = 0.0;
 
     if(magnet){
-        Eigen::VectorXd H(3), nan(3);
         Eigen::Vector3d corner = V.colwise().minCoeff();
         Eigen::VectorXd phi(32 * 32 * 32);
         Eigen::VectorXd theta;
@@ -265,6 +266,7 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
         heaviside(theta, phi, epsilon);
         poisson(potential, theta, cell_width, k, grid_length);
         dH_Internal_field(dH, potential, cell_width, grid_length);
+        interpolate(boundary_value, dH, corner, cell_width, Ib, q, grid_length);
         if(bunny){
             H << 0.0, 5000000.0, 0.0;// bunny
         }
@@ -273,7 +275,6 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
         }
         Nor.resize(Fb.rows(), Fb.cols());
         compute_normals(Nor, q, Ib, Fb);
-        c = (0.5 * mew * k * H.transpose() * H);
     }
 
     for(unsigned int pickedi = 0; pickedi < Visualize::picked_vertices().size(); pickedi++) {   
@@ -314,6 +315,9 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                     Eigen::RowVector3d n = Nor.row(i);
                     //f.segment<3>(3 * Ib(i)) += c * n.transpose();
                     if(!n.hasNaN()){
+                        Eigen::Vector3d H_tot;
+                        H_tot = H - boundary_value.segment<3>(3 * i);
+                        c = (0.5 * mew * k * H_tot.transpose() * H_tot);
                         f.segment<3>(3 * Ib(i)) += c * n.transpose();
                     }
                 }

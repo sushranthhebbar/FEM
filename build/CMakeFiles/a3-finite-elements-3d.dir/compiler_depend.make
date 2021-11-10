@@ -774,7 +774,8 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: ../main.cpp \
   ../include/levelset.h \
   ../include/heaviside.h \
   ../include/poisson.h \
-  ../include/dH_Internal_field.h
+  ../include/dH_Internal_field.h \
+  ../include/interpolate.h
 
 CMakeFiles/a3-finite-elements-3d.dir/shared/src/find_min_vertices.cpp.o: ../shared/src/find_min_vertices.cpp \
   /usr/include/stdc-predef.h \
