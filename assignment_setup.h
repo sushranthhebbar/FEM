@@ -188,6 +188,7 @@ inline void assignment_setup(Eigen::VectorXd &q, Eigen::VectorXd &qdot) {
 #include <levelset.h>
 #include <heaviside.h>
 #include <poisson.h>
+#include <dH_Internal_field.h>
 
 //Variable for geometry
 Eigen::MatrixXd V; //vertices of simulation mesh 
@@ -256,11 +257,12 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
         Eigen::Vector3d corner = V.colwise().minCoeff();
         Eigen::VectorXd phi(32 * 32 * 32);
         Eigen::VectorXd theta;
-        Eigen::MatrixXd potential;
+        Eigen::MatrixXd potential, dH;
         levelset(phi, corner, cell_width, grid_length, Ib, q);
         epsilon = 3 * cell_width / 2;
         heaviside(theta, phi, epsilon);
         poisson(potential, theta, cell_width, k, grid_length);
+        dH_Internal_field(dH, potential, cell_width, grid_length);
         if(bunny){
             H << 0.0, 5000000.0, 0.0;// bunny
         }

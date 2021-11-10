@@ -47,7 +47,7 @@ void poisson(Eigen::MatrixXd &potential, Eigen::Ref<const Eigen::VectorXd> theta
         }
     }
 
-    Eigen::ConjugateGradient<Eigen::SparseMatrix<double>> cg_x, cg_y, cg_z, cg;
+    Eigen::ConjugateGradient<Eigen::SparseMatrix<double>> cg;
     //std::cout<<"Before final for loop in poisson"<<std::endl;
     for(int j = 0; j < 3; j++){
         K.setZero();

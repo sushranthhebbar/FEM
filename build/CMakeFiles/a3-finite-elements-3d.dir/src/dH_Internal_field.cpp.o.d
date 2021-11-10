@@ -1,6 +1,12 @@
-CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/9/iostream \
+CMakeFiles/a3-finite-elements-3d.dir/src/dH_Internal_field.cpp.o: \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/src/dH_Internal_field.cpp \
+ /usr/include/stdc-predef.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/dH_Internal_field.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/Dense \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/Core \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Core/util/Macros.h \
+ /usr/include/c++/9/complex \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -9,14 +15,61 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
- /usr/include/c++/9/ostream /usr/include/c++/9/ios \
+ /usr/include/c++/9/bits/cpp_type_traits.h \
+ /usr/include/c++/9/ext/type_traits.h /usr/include/c++/9/cmath \
+ /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/timesize.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/time64.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+ /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+ /usr/include/x86_64-linux-gnu/bits/mathinline.h \
+ /usr/include/c++/9/bits/std_abs.h /usr/include/stdlib.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endianness.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+ /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h /usr/include/c++/9/sstream \
+ /usr/include/c++/9/istream /usr/include/c++/9/ios \
  /usr/include/c++/9/iosfwd /usr/include/c++/9/bits/stringfwd.h \
  /usr/include/c++/9/bits/memoryfwd.h /usr/include/c++/9/bits/postypes.h \
  /usr/include/c++/9/cwchar /usr/include/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
@@ -24,8 +77,6 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/wchar2.h /usr/include/c++/9/exception \
  /usr/include/c++/9/bits/exception.h \
  /usr/include/c++/9/bits/exception_ptr.h \
@@ -37,8 +88,6 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: \
  /usr/include/c++/9/type_traits /usr/include/c++/9/bits/char_traits.h \
  /usr/include/c++/9/bits/stl_algobase.h \
  /usr/include/c++/9/bits/functexcept.h \
- /usr/include/c++/9/bits/cpp_type_traits.h \
- /usr/include/c++/9/ext/type_traits.h \
  /usr/include/c++/9/ext/numeric_traits.h \
  /usr/include/c++/9/bits/stl_pair.h \
  /usr/include/c++/9/bits/stl_iterator_base_types.h \
@@ -48,40 +97,23 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: \
  /usr/include/c++/9/bits/ptr_traits.h /usr/include/c++/9/debug/debug.h \
  /usr/include/c++/9/bits/predefined_ops.h /usr/include/c++/9/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/9/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++locale.h \
  /usr/include/c++/9/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/9/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/endian.h \
- /usr/include/x86_64-linux-gnu/bits/endianness.h \
- /usr/include/c++/9/bits/ios_base.h /usr/include/c++/9/ext/atomicity.h \
+ /usr/include/ctype.h /usr/include/c++/9/bits/ios_base.h \
+ /usr/include/c++/9/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h \
- /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
  /usr/include/x86_64-linux-gnu/bits/cpu-set.h /usr/include/time.h \
  /usr/include/x86_64-linux-gnu/bits/time.h \
  /usr/include/x86_64-linux-gnu/bits/timex.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
- /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
- /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
- /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
- /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
- /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
- /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/atomic_word.h \
  /usr/include/c++/9/bits/locale_classes.h /usr/include/c++/9/string \
@@ -98,21 +130,8 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: \
  /usr/include/c++/9/ext/alloc_traits.h \
  /usr/include/c++/9/bits/alloc_traits.h \
  /usr/include/c++/9/ext/string_conversions.h /usr/include/c++/9/cstdlib \
- /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/endian.h \
- /usr/include/x86_64-linux-gnu/bits/byteswap.h \
- /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h \
- /usr/include/c++/9/bits/std_abs.h /usr/include/c++/9/cstdio \
- /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+ /usr/include/c++/9/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
@@ -138,48 +157,9 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: \
  /usr/include/c++/9/bits/streambuf_iterator.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_inline.h \
  /usr/include/c++/9/bits/locale_facets.tcc \
- /usr/include/c++/9/bits/basic_ios.tcc \
- /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
- /usr/include/c++/9/bits/istream.tcc /usr/include/c++/9/thread \
- /usr/include/c++/9/chrono /usr/include/c++/9/ratio \
- /usr/include/c++/9/limits /usr/include/c++/9/ctime \
- /usr/include/c++/9/bits/parse_numbers.h /usr/include/c++/9/memory \
- /usr/include/c++/9/bits/stl_construct.h \
- /usr/include/c++/9/bits/stl_uninitialized.h \
- /usr/include/c++/9/bits/stl_tempbuf.h \
- /usr/include/c++/9/bits/stl_raw_storage_iter.h \
- /usr/include/c++/9/ext/concurrence.h \
- /usr/include/c++/9/bits/uses_allocator.h \
- /usr/include/c++/9/bits/unique_ptr.h /usr/include/c++/9/utility \
- /usr/include/c++/9/bits/stl_relops.h /usr/include/c++/9/tuple \
- /usr/include/c++/9/array /usr/include/c++/9/bits/invoke.h \
- /usr/include/c++/9/bits/shared_ptr.h \
- /usr/include/c++/9/bits/shared_ptr_base.h \
- /usr/include/c++/9/bits/allocated_ptr.h \
- /usr/include/c++/9/bits/refwrap.h \
- /usr/include/c++/9/ext/aligned_buffer.h \
- /usr/include/c++/9/bits/shared_ptr_atomic.h \
- /usr/include/c++/9/bits/atomic_base.h \
- /usr/include/c++/9/bits/atomic_lockfree_defines.h \
- /usr/include/c++/9/backward/auto_ptr.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/assignment_setup.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/readMESH.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/igl_inline.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/Core \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Core/util/Macros.h \
- /usr/include/c++/9/complex /usr/include/c++/9/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
- /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
- /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
- /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
- /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
- /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/x86_64-linux-gnu/bits/mathinline.h \
- /usr/include/c++/9/sstream /usr/include/c++/9/bits/sstream.tcc \
+ /usr/include/c++/9/bits/basic_ios.tcc /usr/include/c++/9/ostream \
+ /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/bits/istream.tcc \
+ /usr/include/c++/9/bits/sstream.tcc \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Core/util/MKL_support.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/emmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
@@ -187,11 +167,15 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
  /usr/include/c++/9/stdlib.h /usr/include/c++/9/cstddef \
  /usr/include/c++/9/cassert /usr/include/assert.h \
- /usr/include/c++/9/functional /usr/include/c++/9/bits/std_function.h \
- /usr/include/c++/9/cstring /usr/include/string.h /usr/include/strings.h \
+ /usr/include/c++/9/functional /usr/include/c++/9/tuple \
+ /usr/include/c++/9/utility /usr/include/c++/9/bits/stl_relops.h \
+ /usr/include/c++/9/array /usr/include/c++/9/bits/uses_allocator.h \
+ /usr/include/c++/9/bits/invoke.h /usr/include/c++/9/bits/refwrap.h \
+ /usr/include/c++/9/bits/std_function.h /usr/include/c++/9/cstring \
+ /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
- /usr/include/c++/9/climits \
+ /usr/include/c++/9/limits /usr/include/c++/9/climits \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -202,7 +186,8 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /usr/include/c++/9/algorithm /usr/include/c++/9/bits/stl_algo.h \
  /usr/include/c++/9/bits/algorithmfwd.h \
- /usr/include/c++/9/bits/stl_heap.h \
+ /usr/include/c++/9/bits/stl_heap.h /usr/include/c++/9/bits/stl_tempbuf.h \
+ /usr/include/c++/9/bits/stl_construct.h \
  /usr/include/c++/9/bits/uniform_int_dist.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Core/util/Constants.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Core/util/ForwardDeclarations.h \
@@ -303,14 +288,6 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Core/ArrayWrapper.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Core/GlobalFunctions.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h \
- /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_vector.h \
- /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/readMESH.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/readMESH.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/list_to_matrix.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/list_to_matrix.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/Dense \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/Core \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/LU \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/misc/Solve.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/misc/Kernel.h \
@@ -369,37 +346,13 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Eigenvalues/RealQZ.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/max_size.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/max_size.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/min_size.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/min_size.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/readOBJ.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/deprecated.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/readOBJ.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/readOBJ.h \
- /usr/include/c++/9/fstream /usr/include/c++/9/bits/codecvt.h \
- /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
- /usr/include/c++/9/bits/fstream.tcc /usr/include/c++/9/iterator \
- /usr/include/c++/9/bits/stream_iterator.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/writeOBJ.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/writeOBJ.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/writeOBJ.h \
- /usr/include/c++/9/iomanip /usr/include/c++/9/locale \
- /usr/include/c++/9/bits/locale_facets_nonio.h \
- /usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/9/bits/locale_facets_nonio.tcc \
- /usr/include/c++/9/bits/locale_conv.h \
- /usr/include/c++/9/bits/quoted_string.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/readOFF.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/readOFF.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/readOFF.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/shared/include/read_tetgen.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/shared/include/EigenTypes.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/Sparse \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/SparseCore \
+ /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_uninitialized.h \
+ /usr/include/c++/9/bits/stl_vector.h \
+ /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
  /usr/include/c++/9/map /usr/include/c++/9/bits/stl_tree.h \
+ /usr/include/c++/9/ext/aligned_buffer.h \
  /usr/include/c++/9/bits/stl_map.h /usr/include/c++/9/bits/stl_multimap.h \
  /usr/include/c++/9/bits/erase_if.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/SparseCore/SparseUtil.h \
@@ -468,241 +421,5 @@ CMakeFiles/a3-finite-elements-3d.dir/main.cpp.o: \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/boundary_facets.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/boundary_facets.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/boundary_facets.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/face_occurrences.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/face_occurrences.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/matrix_to_list.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/matrix_to_list.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/sort.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/sort.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/SortableRow.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/reorder.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/reorder.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/IndexComparison.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/colon.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/colon.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/LinSpaced.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/parallel_for.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/unique_rows.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/unique_rows.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/sortrows.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/sortrows.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/get_seconds.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/get_seconds.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/accumarray.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/accumarray.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/slice_mask.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/slice_mask.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/slice.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/slice.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/unsupported/Eigen/SparseExtra \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/Sparse \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/misc/Solve.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/misc/SparseSolve.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/DynamicSparseMatrix.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/BlockOfDynamicSparseMatrix.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/RandomSetter.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/MarketIO.h \
- /usr/include/dirent.h /usr/include/x86_64-linux-gnu/bits/dirent.h \
- /usr/include/x86_64-linux-gnu/bits/dirent_ext.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/MatrixMarketIterator.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/find.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/find.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/verbose.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/volume.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/volume.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/volume.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/cross.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/cross.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/Geometry \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/shared/include/visualization.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/unproject.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/unproject.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/unproject.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/LU \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/pick_nearest_vertices.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/glfw/Viewer.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/igl_inline.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/MeshGL.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/igl_inline.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/MeshGL.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/MeshGL.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/bind_vertex_attrib_array.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/gl.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/glad/include/glad/glad.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/glad/include/KHR/khrplatform.h \
- /usr/include/inttypes.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/igl_inline.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/bind_vertex_attrib_array.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/create_shader_program.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/create_shader_program.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/load_shader.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/load_shader.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/print_shader_info_log.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/print_shader_info_log.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/print_program_info_log.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/print_program_info_log.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/destroy_shader_program.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/destroy_shader_program.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/report_gl_error.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/report_gl_error.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/verbose.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/ViewerCore.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/MeshGL.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/serialize.h \
- /usr/include/c++/9/numeric /usr/include/c++/9/bits/stl_numeric.h \
- /usr/include/c++/9/set /usr/include/c++/9/bits/stl_set.h \
- /usr/include/c++/9/bits/stl_multiset.h /usr/include/c++/9/list \
- /usr/include/c++/9/bits/stl_list.h /usr/include/c++/9/bits/list.tcc \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/ViewerCore.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/ViewerCore.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/ViewerData.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/ViewerData.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/per_face_normals.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/per_face_normals.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/per_face_normals.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/material_colors.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/parula.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/parula.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/parula.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/colormap.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/colormap.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/jet.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/jet.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/per_vertex_normals.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/per_vertex_normals.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/per_vertex_normals.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/doublearea.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/doublearea.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/edge_lengths.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/edge_lengths.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/squared_edge_lengths.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/squared_edge_lengths.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/internal_angles.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/internal_angles.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/quat_to_mat.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/quat_to_mat.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/quat_to_mat.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/snap_to_fixed_up.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/snap_to_fixed_up.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/snap_to_fixed_up.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/look_at.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/look_at.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/look_at.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/frustum.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/frustum.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/frustum.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/ortho.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/ortho.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/ortho.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/massmatrix.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/massmatrix.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/massmatrix.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/massmatrix_intrinsic.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/massmatrix_intrinsic.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/normalize_row_sums.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/normalize_row_sums.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/sparse.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/sparse.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/repmat.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/repmat.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/barycenter.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/barycenter.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/barycenter.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/PI.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/ViewerData.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/glfw/ViewerPlugin.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/glfw/Viewer.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/glfw/Viewer.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/gl.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/glfw/include/GLFW/glfw3.h \
- /usr/include/GL/gl.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/project.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/project.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/project.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/get_seconds.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/adjacency_list.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/adjacency_list.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/adjacency_list.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/writeOFF.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/writeOFF.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/writeOFF.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/massmatrix.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/file_dialog_open.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/file_dialog_open.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/file_dialog_open.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/file_dialog_save.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/file_dialog_save.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/file_dialog_save.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/quat_mult.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/quat_mult.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/quat_mult.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/axis_angle_to_quat.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/axis_angle_to_quat.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/axis_angle_to_quat.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/EPS.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/EPS.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/trackball.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/trackball.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/trackball.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/dot.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/dot.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/two_axis_valuator_fixed_up.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/two_axis_valuator_fixed_up.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/two_axis_valuator_fixed_up.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/PI.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/snap_to_canonical_view_quat.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/snap_to_canonical_view_quat.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/snap_to_canonical_view_quat.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/canonical_quaternions.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/canonical_quaternions.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/normalize_quat.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/normalize_quat.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/glfw/imgui/ImGuiMenu.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/glfw/ViewerPlugin.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/glfw/imgui/ImGuiMenu.cpp \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/glfw/imgui/ImGuiMenu.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/glfw/imgui/ImGuiHelpers.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/glfw/imgui/ImGuiTraits.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/libigl-imgui/../imgui/imgui.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/imgui/imconfig.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/libigl-imgui/../imgui/examples/imgui_impl_glfw.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/libigl-imgui/../imgui/examples/imgui_impl_opengl3.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/libigl-imgui/./imgui_fonts_droid_sans.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/opengl/glfw/imgui/ImGuiHelpers.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/libigl-imgui/../imgui/imgui_internal.h \
- /usr/include/c++/9/math.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/imgui/imstb_textedit.h \
- /usr/include/c++/9/deque /usr/include/c++/9/bits/stl_deque.h \
- /usr/include/c++/9/bits/deque.tcc \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/shared/include/init_state.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/shared/include/find_min_vertices.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/fixed_point_constraints.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/dphi_linear_tetrahedron_dX.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/psi_neo_hookean.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/quadrature_single_point.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/T_linear_tetrahedron.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/V_linear_tetrahedron.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/V_spring_particle_particle.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/dV_linear_tetrahedron_dq.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/dV_spring_particle_particle_dq.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/d2V_linear_tetrahedron_dq2.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/mass_matrix_mesh.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/assemble_forces.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/assemble_stiffness.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/linearly_implicit_euler.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/SparseCholesky \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/implicit_euler.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/newtons_method.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/build_skinning_matrix.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/compute_normals.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/include/igl/per_vertex_normals.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/levelset.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/heaviside.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/poisson.h \
- /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/dH_Internal_field.h
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/shared/include/EigenTypes.h \
+ /usr/include/c++/9/iostream
