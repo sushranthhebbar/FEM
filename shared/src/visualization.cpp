@@ -349,6 +349,15 @@ bool Visualize::plot_phase_space(const char *label, ImVec2 q_bounds, ImVec2 q_do
             );
     }
 
+    void Visualize::add_scalar_field_visualization(const Eigen::VectorXd &f){
+        Eigen::VectorXd f_mag(f.rows()/3);
+        for(int i = 0; i < f.rows(); i+=3){
+            Eigen::Vector3d fi = f.segment<3>(i);
+            f_mag(i / 3) = fi.norm();
+        }
+        g_viewer.data().set_colors(f_mag);
+    }
+
     void Visualize::rigid_transform_1d(unsigned int id, double x) {
         
         //reset vertex positions 

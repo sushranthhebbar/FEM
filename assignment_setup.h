@@ -322,6 +322,7 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                     }
                 }
             }
+            Visualize::add_scalar_field_visualization(f);
             f = P*f; 
         };
 

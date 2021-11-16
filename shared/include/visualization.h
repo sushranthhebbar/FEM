@@ -34,6 +34,7 @@ namespace Visualize {
                              const Eigen::MatrixXi &F_skin,  const Eigen::SparseMatrixd &N, Eigen::RowVector3d color);
     
     void add_boundary_box(const Eigen::MatrixXd &V_box, const Eigen::MatrixXi &E_box);
+    void add_scalar_field_visualization(const Eigen::VectorXd &f);
 
     //animate geometry using physics simulation
     void rigid_transform_1d(unsigned int id, double x);

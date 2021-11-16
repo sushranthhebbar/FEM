@@ -72,14 +72,16 @@ int main()
     cout<< 6 * P <<endl;*/
     Eigen:: VectorXd A(4), B(4), C(4);
     A << 1, 0, 0, 0;
-    B << 0, 1, 0, 0;
-    C << 0, 0, 1, 0; 
+    B << 0, 1, 2, 0;
+    C << 0, 0, -1, 0; 
 
     Eigen::MatrixXd T;
     T.resize(4, 3);
     T.col(0) = A;
     T.col(1) = B;
     T.col(2) = C;
-    cout << T <<endl;
+    cout<<T<<endl;
+    cout << T.colwise().minCoeff() <<endl;
+    cout << ((T.rowwise() - T.colwise().minCoeff()).array().rowwise())/((T.colwise().maxCoeff() - T.colwise().minCoeff()).array()) <<endl;
     return 0;
 }
