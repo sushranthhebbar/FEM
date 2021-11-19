@@ -4,7 +4,7 @@ void compute_normals(Eigen::MatrixXd &N ,Eigen::Ref<const Eigen::VectorXd> q, Ei
 
     //std::cout<<"Inside compute_normals"<<std::endl;
     //N.resize(Fb.rows(), Fb.cols());
-    Eigen::MatrixXd Vb(Fb.rows(), Fb.cols());
+    Eigen::MatrixXd Vb(Ib.rows(), Fb.cols());
     //std::cout<<"Before for loop"<<std::endl;
     for(int i = 0; i < Ib.rows(); i++)
     {
@@ -19,5 +19,6 @@ void compute_normals(Eigen::MatrixXd &N ,Eigen::Ref<const Eigen::VectorXd> q, Ei
     //std::cout<<std::endl;
     //igl::per_vertex_normals(Vb, Fb, igl::PER_VERTEX_NORMALS_WEIGHTING_TYPE_UNIFORM, N);
     igl::per_vertex_normals(Vb, Fb, N);
+    //std::cout<<N.rows()<<std::endl;
 
 }

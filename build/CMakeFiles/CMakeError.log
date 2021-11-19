@@ -1,22 +1,22 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_a9d3e/fast && /usr/bin/make  -f CMakeFiles/cmTC_a9d3e.dir/build.make CMakeFiles/cmTC_a9d3e.dir/build
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8c371/fast && /usr/bin/make  -f CMakeFiles/cmTC_8c371.dir/build.make CMakeFiles/cmTC_8c371.dir/build
 make[1]: Entering directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a9d3e.dir/src.c.o
-/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_a9d3e.dir/src.c.o -c /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_a9d3e
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9d3e.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC  -rdynamic CMakeFiles/cmTC_a9d3e.dir/src.c.o -o cmTC_a9d3e 
-/usr/bin/ld: CMakeFiles/cmTC_a9d3e.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_8c371.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_8c371.dir/src.c.o -c /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_8c371
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c371.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC  -rdynamic CMakeFiles/cmTC_8c371.dir/src.c.o -o cmTC_8c371 
+/usr/bin/ld: CMakeFiles/cmTC_8c371.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
 /usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_a9d3e.dir/build.make:99: cmTC_a9d3e] Error 1
+make[1]: *** [CMakeFiles/cmTC_8c371.dir/build.make:99: cmTC_8c371] Error 1
 make[1]: Leaving directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_a9d3e/fast] Error 2
+make: *** [Makefile:127: cmTC_8c371/fast] Error 2
 
 
 Source file was:
@@ -43,198 +43,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_bddc8/fast && /usr/bin/make  -f CMakeFiles/cmTC_bddc8.dir/build.make CMakeFiles/cmTC_bddc8.dir/build
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2e2aa/fast && /usr/bin/make  -f CMakeFiles/cmTC_2e2aa.dir/build.make CMakeFiles/cmTC_2e2aa.dir/build
 make[1]: Entering directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_bddc8.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_bddc8.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.21/Modules/CheckFunctionExists.c
-Linking C executable cmTC_bddc8
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bddc8.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_bddc8.dir/CheckFunctionExists.c.o -o cmTC_bddc8  -lpthreads 
+Building C object CMakeFiles/cmTC_2e2aa.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_2e2aa.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2e2aa
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e2aa.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_2e2aa.dir/CheckFunctionExists.c.o -o cmTC_2e2aa  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_bddc8.dir/build.make:99: cmTC_bddc8] Error 1
+make[1]: *** [CMakeFiles/cmTC_2e2aa.dir/build.make:99: cmTC_2e2aa] Error 1
 make[1]: Leaving directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_bddc8/fast] Error 2
-
-
-
-Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_08e24/fast && /usr/bin/make  -f CMakeFiles/cmTC_08e24.dir/build.make CMakeFiles/cmTC_08e24.dir/build
-make[1]: Entering directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_08e24.dir/src.c.o
-/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_08e24.dir/src.c.o -c /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_08e24
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08e24.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC  -rdynamic CMakeFiles/cmTC_08e24.dir/src.c.o -o cmTC_08e24 
-/usr/bin/ld: CMakeFiles/cmTC_08e24.dir/src.c.o: in function `main':
-src.c:(.text+0x46): undefined reference to `pthread_create'
-/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
-/usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
-/usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
-collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_08e24.dir/build.make:99: cmTC_08e24] Error 1
-make[1]: Leaving directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_08e24/fast] Error 2
-
-
-Source file was:
-#include <pthread.h>
-
-static void* test_func(void* data)
-{
-  return data;
-}
-
-int main(void)
-{
-  pthread_t thread;
-  pthread_create(&thread, NULL, test_func, NULL);
-  pthread_detach(thread);
-  pthread_cancel(thread);
-  pthread_join(thread, NULL);
-  pthread_atfork(NULL, NULL, NULL);
-  pthread_exit(NULL);
-
-  return 0;
-}
-
-Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_ec73e/fast && /usr/bin/make  -f CMakeFiles/cmTC_ec73e.dir/build.make CMakeFiles/cmTC_ec73e.dir/build
-make[1]: Entering directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ec73e.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_ec73e.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.21/Modules/CheckFunctionExists.c
-Linking C executable cmTC_ec73e
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec73e.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_ec73e.dir/CheckFunctionExists.c.o -o cmTC_ec73e  -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
-collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_ec73e.dir/build.make:99: cmTC_ec73e] Error 1
-make[1]: Leaving directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_ec73e/fast] Error 2
-
-
-
-Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_e0d94/fast && /usr/bin/make  -f CMakeFiles/cmTC_e0d94.dir/build.make CMakeFiles/cmTC_e0d94.dir/build
-make[1]: Entering directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e0d94.dir/src.c.o
-/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_e0d94.dir/src.c.o -c /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_e0d94
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0d94.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC  -rdynamic CMakeFiles/cmTC_e0d94.dir/src.c.o -o cmTC_e0d94 
-/usr/bin/ld: CMakeFiles/cmTC_e0d94.dir/src.c.o: in function `main':
-src.c:(.text+0x46): undefined reference to `pthread_create'
-/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
-/usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
-/usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
-collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_e0d94.dir/build.make:99: cmTC_e0d94] Error 1
-make[1]: Leaving directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_e0d94/fast] Error 2
-
-
-Source file was:
-#include <pthread.h>
-
-static void* test_func(void* data)
-{
-  return data;
-}
-
-int main(void)
-{
-  pthread_t thread;
-  pthread_create(&thread, NULL, test_func, NULL);
-  pthread_detach(thread);
-  pthread_cancel(thread);
-  pthread_join(thread, NULL);
-  pthread_atfork(NULL, NULL, NULL);
-  pthread_exit(NULL);
-
-  return 0;
-}
-
-Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_2148a/fast && /usr/bin/make  -f CMakeFiles/cmTC_2148a.dir/build.make CMakeFiles/cmTC_2148a.dir/build
-make[1]: Entering directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2148a.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_2148a.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.21/Modules/CheckFunctionExists.c
-Linking C executable cmTC_2148a
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2148a.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_2148a.dir/CheckFunctionExists.c.o -o cmTC_2148a  -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
-collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_2148a.dir/build.make:99: cmTC_2148a] Error 1
-make[1]: Leaving directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_2148a/fast] Error 2
-
-
-
-Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_9389a/fast && /usr/bin/make  -f CMakeFiles/cmTC_9389a.dir/build.make CMakeFiles/cmTC_9389a.dir/build
-make[1]: Entering directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9389a.dir/src.c.o
-/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_9389a.dir/src.c.o -c /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_9389a
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9389a.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC  -rdynamic CMakeFiles/cmTC_9389a.dir/src.c.o -o cmTC_9389a 
-/usr/bin/ld: CMakeFiles/cmTC_9389a.dir/src.c.o: in function `main':
-src.c:(.text+0x46): undefined reference to `pthread_create'
-/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
-/usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
-/usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
-collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_9389a.dir/build.make:99: cmTC_9389a] Error 1
-make[1]: Leaving directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_9389a/fast] Error 2
-
-
-Source file was:
-#include <pthread.h>
-
-static void* test_func(void* data)
-{
-  return data;
-}
-
-int main(void)
-{
-  pthread_t thread;
-  pthread_create(&thread, NULL, test_func, NULL);
-  pthread_detach(thread);
-  pthread_cancel(thread);
-  pthread_join(thread, NULL);
-  pthread_atfork(NULL, NULL, NULL);
-  pthread_exit(NULL);
-
-  return 0;
-}
-
-Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_4811e/fast && /usr/bin/make  -f CMakeFiles/cmTC_4811e.dir/build.make CMakeFiles/cmTC_4811e.dir/build
-make[1]: Entering directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4811e.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_4811e.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.21/Modules/CheckFunctionExists.c
-Linking C executable cmTC_4811e
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4811e.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_4811e.dir/CheckFunctionExists.c.o -o cmTC_4811e  -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
-collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_4811e.dir/build.make:99: cmTC_4811e] Error 1
-make[1]: Leaving directory '/home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_4811e/fast] Error 2
+make: *** [Makefile:127: cmTC_2e2aa/fast] Error 2
 
 
 

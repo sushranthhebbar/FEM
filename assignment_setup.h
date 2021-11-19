@@ -233,11 +233,13 @@ Eigen::SparseMatrixd tmp_stiffness;
 
 std::vector<std::pair<Eigen::Vector3d, unsigned int>> spring_points;
 
+bool visualization = false;
 bool skinning_on = true;
 bool fully_implicit = false;
-bool bunny = true; 
+bool bunny = false; 
 bool magnet = false;
 bool box = false;
+bool cube86 = false;
 
 //selection spring
 double k_selected = 1e5;
@@ -257,6 +259,7 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
     double c = 0.0;
 
     if(magnet){
+        //std::cout<<magnet<<std::endl;
         Eigen::Vector3d corner = V.colwise().minCoeff();
         Eigen::VectorXd phi(32 * 32 * 32);
         Eigen::VectorXd theta;
@@ -270,10 +273,14 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
         if(bunny){
             H << 0.0, 5000000.0, 0.0;// bunny
         }
+        else if(cube86){
+            H << 0.0, 500000.0, 0.0;
+        }
         else{
             H << 0.0, 10000.0, 0.0;// arma
         }
-        Nor.resize(Fb.rows(), Fb.cols());
+        Nor.resize(Ib.rows(), Fb.cols());
+        //std::cout<<"HERE"<<std::endl;
         compute_normals(Nor, q, Ib, Fb);
     }
 
@@ -310,19 +317,28 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                 f.segment<3>(3*Visualize::picked_vertices()[pickedi]) -= dV_mouse.segment<3>(3);
             }
             if(magnet){
+                //std::cout<<"Before loop"<<std::endl;
+                std::cout<<Nor.rows()<<" "<<Ib.rows()<<std::endl;
+                //std::cout<<Nor.cols()<<" "<<Ib.cols()<<std::endl;
                 for(int i = 0; i < Ib.rows(); i++){
                     //f.segment<3>(3 * Ib(i)) -= Eigen::Vector3d(0.0, 10000.0, 0.0);
+                    //std::cout<<"Inside loop"<<std::endl;
                     Eigen::RowVector3d n = Nor.row(i);
+                    //std::cout<<"After n"<<std::endl;
                     //f.segment<3>(3 * Ib(i)) += c * n.transpose();
                     if(!n.hasNaN()){
+                        //std::cout<<i<<std::endl;
                         Eigen::Vector3d H_tot;
                         H_tot = H - boundary_value.segment<3>(3 * i);
                         c = (0.5 * mew * k * H_tot.transpose() * H_tot);
                         f.segment<3>(3 * Ib(i)) += c * n.transpose();
                     }
                 }
+                //std::cout<<"After loop"<<std::endl;
             }
-            Visualize::add_scalar_field_visualization(f);
+            if(visualization){
+                Visualize::add_scalar_field_visualization(f, fixed_point_indices);
+            }
             f = P*f; 
         };
 
@@ -379,13 +395,15 @@ bool key_down_callback(igl::opengl::glfw::Viewer &viewer, unsigned char key, int
         box = ! box;
     }
 
+    else if(key=='V'){
+        visualization = !visualization;
+    }
+
     return false;
 }
 inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::VectorXd &qdot) {
 
     //load geometric data 
-    igl::readMESH("../data/coarser_bunny.mesh",V,T, F);
-    igl::readOBJ("../data/bunny_skin.obj", V_skin, F_skin);
 
     if(argc > 1) {
         if(strcmp(argv[1], "arma") == 0) {
@@ -395,9 +413,22 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
             bunny = false;
             fully_implicit = true;
         }
+        else if(strcmp(argv[1], "cube86") == 0) {
+            igl::readMESH("../data/cube86.mesh", V, T, F);
+
+            cube86 = true;
+            fully_implicit = false;
+        }
+        else if(strcmp(argv[1], "bunny") == 0){
+            igl::readMESH("../data/coarser_bunny.mesh",V,T, F);
+            igl::readOBJ("../data/bunny_skin.obj", V_skin, F_skin);
+
+            bunny = true;
+            fully_implicit = false;
+        }
     }
     
-    std::cout<<V.rows()<<" "<<T.rows()<<" "<<V_skin.rows()<<std::endl;
+    //std::cout<<V.rows()<<" "<<T.rows()<<std::endl;
 
     igl::boundary_facets(T, F);
     F = F.rowwise().reverse().eval();
@@ -443,18 +474,23 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     double length = std::max(abs(mi(0) - mx(0)), std::max(abs(mi(1) - mx(1)), abs(mi(2) - mx(2))));
     length = round(length) + grid_length;
     cell_width = length / grid_length;
-    std::cout<<cell_width<<std::endl;
+    //std::cout<<cell_width<<std::endl;
     //std::cout<<Fb<<std::endl;
     //std::cout<<Ib.rows()<<std::endl;
     //std::cout<<V.rows()<<std::endl;
     //for(int i = 0; i < tmp.size(); i++) std::cout<<tmp[i]<<" ";
     //std::cout<<std::endl;
     //auto it = std::unique(ind.begin(), ind.end());
+
     build_skinning_matrix(N, V, T, V_skin);
 
     //setup simulation 
     init_state(q,qdot,V);
-
+    Eigen::MatrixXd Nor;
+    Nor.resize(Ib.rows(), Fb.cols());
+    compute_normals(Nor, q, Ib, Fb);
+    std::cout<<Nor<<std::endl;
+    //return;
     /*Eigen::MatrixXd Nor;
     compute_normals(Nor, q, Ib, Fb);
     std::cout<<Nor<<std::endl;*/
@@ -495,6 +531,8 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     //bunny
     if(bunny)
         Visualize::set_picking_tolerance(1.);
+    else if(cube86)
+        Visualize::set_picking_tolerance(1.);
     else
         Visualize::set_picking_tolerance(0.01);
 
@@ -512,9 +550,11 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     //setup constraint matrix
     if(bunny)
         find_min_vertices(fixed_point_indices, V, 3);
+    else if(cube86){
+        find_min_vertices(fixed_point_indices, V, 0.001);}
+        //std::cout<<fixed_point_indices.size()<<std::endl;
     else
         find_min_vertices(fixed_point_indices, V, 0.1);
-
     //material properties
     //bunny
     if(bunny) {
@@ -523,7 +563,15 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
         D = 0.5*(YM*mu)/((1.0+mu)*(1.0-2.0*mu));
         C = 0.5*YM/(2.0*(1.0+mu));
         k_selected = 1e8;
-    } else {
+    } 
+    else if(cube86){
+        YM = 6e6; //young's modulus
+        mu = 0.4; //poissons ratio
+        D = 0.5*(YM*mu)/((1.0+mu)*(1.0-2.0*mu));
+        C = 0.5*YM/(2.0*(1.0+mu));
+        k_selected = 1e5;
+    }
+    else {
         //arma
         YM = 6e5; //young's modulus
         mu = 0.4; //poissons ratio
@@ -541,7 +589,7 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     q = P*q;
     qdot = P*qdot;
     M = P*M*P.transpose();
-
+    //std::cout<<x0.rows()<<std::endl;
     //igl additional menu setup
     // Add content to the default menu window
     Visualize::viewer_menu().callback_draw_custom_window = [&]()

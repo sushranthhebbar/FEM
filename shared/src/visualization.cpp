@@ -349,12 +349,24 @@ bool Visualize::plot_phase_space(const char *label, ImVec2 q_bounds, ImVec2 q_do
             );
     }
 
-    void Visualize::add_scalar_field_visualization(const Eigen::VectorXd &f){
+    void Visualize::add_scalar_field_visualization(const Eigen::VectorXd &f, std::vector<unsigned int> &fixed_point_indices){
         Eigen::VectorXd f_mag(f.rows()/3);
+        /*std::vector<int> vis(f.rows()/3, 0);
+        for(int i = 0; i < fixed_point_indices.size(); i++){
+            int index = fixed_point_indices[i];
+            vis[index] = 1;
+        }*/
         for(int i = 0; i < f.rows(); i+=3){
             Eigen::Vector3d fi = f.segment<3>(i);
+            /*if(vis[i/3]){
+                f_mag(i / 3) = 0.0;   
+            }
+            else{
+                f_mag(i / 3) = fi.norm();
+            }*/
             f_mag(i / 3) = fi.norm();
         }
+        f_mag = ((f_mag.rowwise() - f_mag.colwise().minCoeff()).array().rowwise())/((f_mag.colwise().maxCoeff() - f_mag.rowwise().minCoeff()).array());
         g_viewer.data().set_colors(f_mag);
     }
 
