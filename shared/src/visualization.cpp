@@ -349,6 +349,10 @@ bool Visualize::plot_phase_space(const char *label, ImVec2 q_bounds, ImVec2 q_do
             );
     }
 
+    void Visualize::add_point(const Eigen::MatrixXd &P){
+        g_viewer.data().add_points(P,Eigen::RowVector3d(1,0,0));
+    }
+
     void Visualize::add_scalar_field_visualization(const Eigen::VectorXd &f, std::vector<unsigned int> &fixed_point_indices){
         Eigen::VectorXd f_mag(f.rows()/3);
         /*std::vector<int> vis(f.rows()/3, 0);
