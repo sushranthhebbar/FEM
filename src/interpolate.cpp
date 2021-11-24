@@ -2,13 +2,18 @@
 #include <iostream>
 
 void interpolate(Eigen::VectorXd &boundary_value, Eigen::Ref<const Eigen::MatrixXd> dH, Eigen::Ref<const Eigen::Vector3d> corner, double cell_width, Eigen::Ref<const Eigen::VectorXi> Ib, Eigen::Ref<const Eigen::VectorXd> q, int grid_length){
-
+    //std::cout<<"Before interpolate"<<std::endl;
     boundary_value.resize(3  * Ib.rows());
     boundary_value.setZero();
-
+    //std::cout<<dH.rows()<<std::endl;
+    //std::cout<<cell_width<<" "<<corner<<std::endl;
     for(int i = 0; i < Ib.rows(); i++){
         Eigen::Vector3d point= q.segment<3>(3 * Ib(i));
         Eigen::Vector3d diff = (point - corner) / cell_width;
+        //std::cout<<i<<" "<<Ib(i)<<std::endl;
+        /*if(i==417){
+            std::cout<<point<<std::endl;
+        }*/
         int i000 = floor(diff(2)) * grid_length * grid_length + floor(diff(1)) * grid_length + floor(diff(0));
         int i100 = i000 + 1;
         int i010 = i000 + grid_length;
@@ -25,6 +30,7 @@ void interpolate(Eigen::VectorXd &boundary_value, Eigen::Ref<const Eigen::Matrix
 
         Eigen::Vector3d coeff = (point - bl) / cell_width;
 
+        //std::cout<<i<<" "<<i000<<" "<<i100<<std::endl;
         Eigen::Vector3d c00 = (1 - coeff(0)) * dH.row(i000) + coeff(0) * dH.row(i100);
         Eigen::Vector3d c01 = (1 - coeff(0)) * dH.row(i001) + coeff(0) * dH.row(i101);
         Eigen::Vector3d c10 = (1 - coeff(0)) * dH.row(i010) + coeff(0) * dH.row(i110);
@@ -38,4 +44,5 @@ void interpolate(Eigen::VectorXd &boundary_value, Eigen::Ref<const Eigen::Matrix
         boundary_value.segment<3>(3 * i)  = c;
 
     }
+    //std::cout<<"After interpolate"<<std::endl;
 }

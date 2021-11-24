@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/a3-finite-elements-3d.dir/src/assemble_forces.cpp.o.d"
   "CMakeFiles/a3-finite-elements-3d.dir/src/assemble_stiffness.cpp.o"
   "CMakeFiles/a3-finite-elements-3d.dir/src/assemble_stiffness.cpp.o.d"
+  "CMakeFiles/a3-finite-elements-3d.dir/src/bar_magnet.cpp.o"
+  "CMakeFiles/a3-finite-elements-3d.dir/src/bar_magnet.cpp.o.d"
   "CMakeFiles/a3-finite-elements-3d.dir/src/build_skinning_matrix.cpp.o"
   "CMakeFiles/a3-finite-elements-3d.dir/src/build_skinning_matrix.cpp.o.d"
   "CMakeFiles/a3-finite-elements-3d.dir/src/compute_normals.cpp.o"

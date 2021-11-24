@@ -35,6 +35,7 @@
 #include <poisson.h>
 #include <dH_Internal_field.h>
 #include <interpolate.h>
+#include <bar_magnet.h>
 
 //Variable for geometry
 Eigen::MatrixXd V; //vertices of simulation mesh 
@@ -130,6 +131,7 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
 
     auto force = [&](Eigen::VectorXd &f, Eigen::Ref<const Eigen::VectorXd> q2, Eigen::Ref<const Eigen::VectorXd> qdot2) { 
         
+            //std::cout<<q.segment<3>(498*3)<<std::endl;
             assemble_forces(f, P.transpose()*q2+x0, P.transpose()*qdot2, V, T, v0, C,D);
             // between 10^5 and 10^7(too high blows up)
             for(unsigned int pickedi = 0; pickedi < spring_points.size(); pickedi++) {
@@ -142,15 +144,18 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                 Eigen::VectorXd phi(32 * 32 * 32);
                 Eigen::VectorXd theta;
                 Eigen::MatrixXd potential, dH;
-                levelset(phi, corner, cell_width, grid_length, Ib, q);
+                //std::cout<<q.segment<3>(498*3)<<std::endl;
+                levelset(phi, corner, cell_width, grid_length, Ib, P.transpose()*q2+x0);
+                //std::cout<<q.segment<3>(498*3)<<std::endl;
                 epsilon = 3 * cell_width / 2;
                 heaviside(theta, phi, epsilon);
                 poisson(potential, theta, cell_width, k, grid_length);
                 dH_Internal_field(dH, potential, cell_width, grid_length);
-                interpolate(boundary_value, dH, corner, cell_width, Ib, q, grid_length);
-                Nor.resize(Ib.rows(), Fb.cols());
+                //std::cout<<q.segment<3>(498*3)<<std::endl;
+                interpolate(boundary_value, dH, corner, cell_width, Ib, P.transpose()*q2+x0, grid_length);
                 //std::cout<<"HERE"<<std::endl;
-                compute_normals(Nor, q, Ib, Fb);
+                Nor.resize(Ib.rows(), Fb.cols());
+                compute_normals(Nor, P.transpose()*q2+x0, Ib, Fb);
                 //std::cout<<Nor.rows()<<" "<<Ib.rows()<<std::endl;
                 //std::cout<<Nor.cols()<<" "<<Ib.cols()<<std::endl;
                 for(int i = 0; i < Ib.rows(); i++){
@@ -164,10 +169,11 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                         Eigen::Vector3d H_tot;
                         if(bunny){
                             if(constant){
+                                //std::cout<<"Inside constant"<<std::endl;
                                 H << 0.0, 5000000.0, 0.0;// bunny
                             }
                             else{
-
+                                bar_magnet(H, Po, q.segment<3>(3 * Ib(i)), 5000000.0);
                             }
                         }
                         else if(cube86){
@@ -256,6 +262,10 @@ bool key_down_callback(igl::opengl::glfw::Viewer &viewer, unsigned char key, int
         visualization = !visualization;
     }
 
+    else if(key=='C'){
+        constant = !constant;
+    }
+
     return false;
 }
 inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::VectorXd &qdot) {
@@ -286,7 +296,6 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     }
     
     //std::cout<<V.rows()<<" "<<T.rows()<<std::endl;
-
     igl::boundary_facets(T, F);
     F = F.rowwise().reverse().eval();
     //std::cout<<F<<std::endl;
@@ -347,6 +356,7 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     Nor.resize(Ib.rows(), Fb.cols());
     compute_normals(Nor, q, Ib, Fb);
     std::cout<<Nor.rows()<<" "<<Ib.rows()<<std::endl;
+    std::cout<<q.segment<3>(498*3)<<std::endl;
     //return;
     /*Eigen::MatrixXd Nor;
     compute_normals(Nor, q, Ib, Fb);

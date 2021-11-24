@@ -408,6 +408,30 @@ src/assemble_stiffness.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/assemble_stiffness.cpp.s
 .PHONY : src/assemble_stiffness.cpp.s
 
+src/bar_magnet.o: src/bar_magnet.cpp.o
+.PHONY : src/bar_magnet.o
+
+# target to build an object file
+src/bar_magnet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/bar_magnet.cpp.o
+.PHONY : src/bar_magnet.cpp.o
+
+src/bar_magnet.i: src/bar_magnet.cpp.i
+.PHONY : src/bar_magnet.i
+
+# target to preprocess a source file
+src/bar_magnet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/bar_magnet.cpp.i
+.PHONY : src/bar_magnet.cpp.i
+
+src/bar_magnet.s: src/bar_magnet.cpp.s
+.PHONY : src/bar_magnet.s
+
+# target to generate assembly for a file
+src/bar_magnet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a3-finite-elements-3d.dir/build.make CMakeFiles/a3-finite-elements-3d.dir/src/bar_magnet.cpp.s
+.PHONY : src/bar_magnet.cpp.s
+
 src/build_skinning_matrix.o: src/build_skinning_matrix.cpp.o
 .PHONY : src/build_skinning_matrix.o
 
@@ -906,6 +930,9 @@ help:
 	@echo "... src/assemble_stiffness.o"
 	@echo "... src/assemble_stiffness.i"
 	@echo "... src/assemble_stiffness.s"
+	@echo "... src/bar_magnet.o"
+	@echo "... src/bar_magnet.i"
+	@echo "... src/bar_magnet.s"
 	@echo "... src/build_skinning_matrix.o"
 	@echo "... src/build_skinning_matrix.i"
 	@echo "... src/build_skinning_matrix.s"
