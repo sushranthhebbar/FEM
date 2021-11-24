@@ -75,7 +75,7 @@ Eigen::VectorXd v0;
 Eigen::VectorXd tmp_qdot;
 Eigen::VectorXd tmp_force;
 Eigen::SparseMatrixd tmp_stiffness;
-
+Eigen::MatrixXd Po(1,3);
 std::vector<std::pair<Eigen::Vector3d, unsigned int>> spring_points;
 
 bool visualization = false;
@@ -167,7 +167,7 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                                 H << 0.0, 5000000.0, 0.0;// bunny
                             }
                             else{
-                                
+
                             }
                         }
                         else if(cube86){
@@ -355,7 +355,16 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     //add geometry to scene
     Visualize::add_object_to_scene(V,F, V_skin, F_skin, N, Eigen::RowVector3d(244,165,130)/255.);
     Visualize::toggle_skinning(false);
-    
+    if(bunny){
+        Po<<100.0, 200.0, 150.0;
+    }
+    else if(cube86){
+        Po<<mi(0) + 0.5, mi(1) + 1.25, mi(2) + 0.5;
+    }
+    else{
+        Po<<mi(0) + 0.45, mx(1) + 0.3, mi(2) + 0.2;
+    }
+    Visualize::add_point(Po);
     /*Eigen::MatrixXd V_box(8,3);
     V_box <<
     mi(0), mi(1), mi(2),
