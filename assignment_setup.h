@@ -167,21 +167,22 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                     if(!n.hasNaN()){
                         //std::cout<<i<<std::endl;
                         Eigen::Vector3d H_tot;
+                        Eigen::Vector3d p = (P.transpose()*q2+x0).segment<3>(3 * Ib(i));
                         if(bunny){
                             if(constant){
                                 //std::cout<<"Inside constant"<<std::endl;
                                 H << 0.0, 5000000.0, 0.0;// bunny
                             }
                             else{
-                                bar_magnet(H, Po, q.segment<3>(3 * Ib(i)), 5000000.0);
+                                bar_magnet(H, Po, p, 1.0 * 5e11);
                             }
                         }
                         else if(cube86){
                             if(constant){
-                                H << 0.0, 100000.0, 0.0;
+                                H << 0.0, 250000.0, 0.0;
                             }
                             else{
-
+                                bar_magnet(H, Po, p, 0.5 * 1e6);
                             }
                         }
                         else{
@@ -189,10 +190,11 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                                 H << 0.0, 10000.0, 0.0;// arma
                             }
                             else{
-
+                                bar_magnet(H, Po, p, 1.0 * 3e4);
                             }
                         }
                         H_tot = H - boundary_value.segment<3>(3 * i);
+                        //H_tot = -boundary_value.segment<3>(3 * i);
                         c = (0.5 * mew * k * H_tot.transpose() * H_tot);
                         f.segment<3>(3 * Ib(i)) += c * n.transpose();
                     }
@@ -355,8 +357,8 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     Eigen::MatrixXd Nor;
     Nor.resize(Ib.rows(), Fb.cols());
     compute_normals(Nor, q, Ib, Fb);
-    std::cout<<Nor.rows()<<" "<<Ib.rows()<<std::endl;
-    std::cout<<q.segment<3>(498*3)<<std::endl;
+    //std::cout<<Nor.rows()<<" "<<Ib.rows()<<std::endl;
+    //std::cout<<q.segment<3>(498*3)<<std::endl;
     //return;
     /*Eigen::MatrixXd Nor;
     compute_normals(Nor, q, Ib, Fb);
@@ -366,10 +368,10 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     Visualize::add_object_to_scene(V,F, V_skin, F_skin, N, Eigen::RowVector3d(244,165,130)/255.);
     Visualize::toggle_skinning(false);
     if(bunny){
-        Po<<100.0, 200.0, 150.0;
+        Po<<mx(0), mx(1), mx(2);
     }
     else if(cube86){
-        Po<<mi(0) + 0.5, mi(1) + 1.25, mi(2) + 0.5;
+        Po<<mi(0) + 0.5, mi(1) + 1.5, mi(2) + 0.5;
     }
     else{
         Po<<mi(0) + 0.45, mx(1) + 0.3, mi(2) + 0.2;
