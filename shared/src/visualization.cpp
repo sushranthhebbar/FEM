@@ -323,6 +323,7 @@ bool Visualize::plot_phase_space(const char *label, ImVec2 q_bounds, ImVec2 q_do
             g_id.push_back(0);     
         } else {
             g_id.push_back(g_viewer.append_mesh());
+            std::cout<<"HERE"<<std::endl;
         }
 
         g_viewer.data().set_mesh(V_skin,F_skin);
@@ -351,6 +352,10 @@ bool Visualize::plot_phase_space(const char *label, ImVec2 q_bounds, ImVec2 q_do
 
     void Visualize::add_point(const Eigen::MatrixXd &P){
         g_viewer.data().add_points(P,Eigen::RowVector3d(1,0,0));
+    }
+
+     void Visualize::update_point(const Eigen::MatrixXd &P){
+        g_viewer.data().set_points(P,Eigen::RowVector3d(1,0,0));
     }
 
     void Visualize::add_scalar_field_visualization(const Eigen::VectorXd &f, std::vector<unsigned int> &fixed_point_indices){

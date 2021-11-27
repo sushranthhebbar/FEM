@@ -48,7 +48,12 @@ Eigen::VectorXi Ib;
 //variables for skinning
 Eigen::MatrixXd V_skin;
 Eigen::MatrixXi F_skin;
-Eigen::SparseMatrixd N; 
+Eigen::SparseMatrixd N;
+
+Eigen::MatrixXi Pf;
+Eigen::MatrixXd Pv_skin;
+Eigen::MatrixXi Pf_skin;
+Eigen::SparseMatrixd Pn;
 
 //material parameters
 double density = 0.1;
@@ -90,6 +95,7 @@ bool constant = true;
 
 //selection spring
 double k_selected = 1e5;
+double mov = 0.0;
 
 inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, double t) {  
 
@@ -246,7 +252,7 @@ bool key_down_callback(igl::opengl::glfw::Viewer &viewer, unsigned char key, int
     if(key =='N') {
         std::cout<<"toggle integrators \n";
         fully_implicit = !fully_implicit;
-    } else if(key == 'S') {
+    } else if(key == 'K') {
         
         skinning_on = !skinning_on;
         Visualize::toggle_skinning(skinning_on);
@@ -254,10 +260,6 @@ bool key_down_callback(igl::opengl::glfw::Viewer &viewer, unsigned char key, int
     else if(key=='M'){
         magnet = ! magnet;
         std::cout<<"magnet = "<<magnet<<"\n";
-    }
-
-    else if(key=='B'){
-        box = ! box;
     }
 
     else if(key=='V'){
@@ -268,6 +270,36 @@ bool key_down_callback(igl::opengl::glfw::Viewer &viewer, unsigned char key, int
         constant = !constant;
     }
 
+    else if(key=='Y'){
+        Po(0, 1)+=mov;
+        Visualize::update_point(Po);
+    }
+
+    else if(key=='H'){
+        Po(0, 1)-=mov;
+        Visualize::update_point(Po);
+    }
+
+    else if(key=='G'){
+        Po(0, 0)-=mov;
+        Visualize::update_point(Po);
+    }
+
+    else if(key=='J'){
+        Po(0, 0)+=mov;
+        Visualize::update_point(Po);
+    }
+
+    else if(key=='X'){
+        Po(0, 2)-=mov;
+        Visualize::update_point(Po);
+    }
+
+    else if(key=='B'){
+        Po(0, 2)+=mov;
+        Visualize::update_point(Po);
+    }
+    //std::cout<<key<<std::endl;
     return false;
 }
 inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::VectorXd &qdot) {
@@ -281,12 +313,14 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
         
             bunny = false;
             fully_implicit = true;
+            mov = 0.1;
         }
         else if(strcmp(argv[1], "cube86") == 0) {
             igl::readMESH("../data/cube86.mesh", V, T, F);
 
             cube86 = true;
             fully_implicit = true;
+            mov = 0.1;
         }
         else if(strcmp(argv[1], "bunny") == 0){
             igl::readMESH("../data/coarser_bunny.mesh",V,T, F);
@@ -294,6 +328,7 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
 
             bunny = true;
             fully_implicit = false;
+            mov = 3.0;
         }
     }
     
@@ -365,18 +400,20 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     std::cout<<Nor<<std::endl;*/
 
     //add geometry to scene
-    Visualize::add_object_to_scene(V,F, V_skin, F_skin, N, Eigen::RowVector3d(244,165,130)/255.);
+    Visualize::add_object_to_scene(V, F, V_skin, F_skin, N, Eigen::RowVector3d(244,165,130)/255.);
     Visualize::toggle_skinning(false);
     if(bunny){
         Po<<mx(0), mx(1), mx(2);
     }
     else if(cube86){
-        Po<<mi(0) + 0.5, mi(1) + 1.5, mi(2) + 0.5;
+        Po<<mi(0) - 1.0, mi(1) + 1.5, mi(2) + 0.5;
     }
     else{
         Po<<mi(0) + 0.45, mx(1) + 0.3, mi(2) + 0.2;
     }
     Visualize::add_point(Po);
+
+    //Visualize::add_object_to_scene(Po, Pf, Pv_skin, Pf_skin, Pn, Eigen::RowVector3d(255,0,0)/255.);
     /*Eigen::MatrixXd V_box(8,3);
     V_box <<
     mi(0), mi(1), mi(2),
