@@ -37,6 +37,7 @@ namespace Visualize {
     void add_scalar_field_visualization(const Eigen::VectorXd &f, std::vector<unsigned int> &fixed_point_indices);
     void add_point(const Eigen::MatrixXd &P);
     void update_point(const Eigen::MatrixXd &P);
+    void update_parameters(bool magnet, bool constant, const Eigen::MatrixXd &P);
     //animate geometry using physics simulation
     void rigid_transform_1d(unsigned int id, double x);
 

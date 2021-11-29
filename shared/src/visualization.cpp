@@ -29,6 +29,9 @@ namespace Visualize {
 
     //mouse UI state variables
     bool g_mouse_dragging = false;
+    bool g_magnet = false;
+    bool g_constant = true;
+    float translation[] = {0.0, 0.0, 0.0};
     double g_picking_tol = 0.001;
     Eigen::Vector3d g_mouse_win; //mouse window coordinates
     Eigen::Vector3d g_mouse_drag; //last mouse drag vector 
@@ -305,12 +308,28 @@ bool Visualize::plot_phase_space(const char *label, ImVec2 q_bounds, ImVec2 q_do
             menu.draw_viewer_menu();
         };
 
+        menu.callback_draw_custom_window = [&]()
+        {
+            ImGui::SetNextWindowPos(ImVec2(180.f * menu.menu_scaling(), 10), ImGuiCond_FirstUseEver);
+            ImGui::SetNextWindowSize(ImVec2(200, 160), ImGuiCond_FirstUseEver);
+            ImGui::Begin("Controls");
+            ImGui::Checkbox("Magnet", &g_magnet);
+            ImGui::Checkbox("Constant", &g_constant);
+            ImGui::SliderFloat3("position", translation, -1.0, 1.0);
+            ImGui::End();
+        };
+
         Visualize::g_viewer.callback_mouse_down = mouse_down;
         Visualize::g_viewer.callback_mouse_up = mouse_up;
         Visualize::g_viewer.callback_mouse_move = mouse_move;
 
         Visualize::g_viewer.core().background_color.setConstant(1.0);
         Visualize::g_viewer.core().is_animating = true;
+    }
+
+    void Visualize::update_parameters(bool magnet, bool constant, const Eigen::MatrixXd &P){
+        magnet = g_magnet;
+        
     }
 
     void Visualize::add_object_to_scene(const Eigen::MatrixXd &V, const Eigen::MatrixXi &F, 
@@ -323,7 +342,6 @@ bool Visualize::plot_phase_space(const char *label, ImVec2 q_bounds, ImVec2 q_do
             g_id.push_back(0);     
         } else {
             g_id.push_back(g_viewer.append_mesh());
-            std::cout<<"HERE"<<std::endl;
         }
 
         g_viewer.data().set_mesh(V_skin,F_skin);

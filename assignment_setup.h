@@ -186,6 +186,7 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                         else if(cube86){
                             if(constant){
                                 H << 0.0, 250000.0, 0.0;
+                                //H << 250000.0, 0.0, 0.0;
                             }
                             else{
                                 bar_magnet(H, Po, p, 0.5 * 1e6);
