@@ -315,7 +315,7 @@ bool Visualize::plot_phase_space(const char *label, ImVec2 q_bounds, ImVec2 q_do
             ImGui::Begin("Controls");
             ImGui::Checkbox("Magnet", &g_magnet);
             ImGui::Checkbox("Constant", &g_constant);
-            ImGui::SliderFloat3("position", translation, -1.0, 1.0);
+            ImGui::SliderFloat3("position", translation, -1.0, 5.0);
             ImGui::End();
         };
 
@@ -327,9 +327,13 @@ bool Visualize::plot_phase_space(const char *label, ImVec2 q_bounds, ImVec2 q_do
         Visualize::g_viewer.core().is_animating = true;
     }
 
-    void Visualize::update_parameters(bool magnet, bool constant, const Eigen::MatrixXd &P){
+    void Visualize::update_parameters(bool &magnet, bool &constant, Eigen::MatrixXd &Ini, Eigen::MatrixXd &Po){
         magnet = g_magnet;
-        
+        constant = g_constant;
+        Eigen::MatrixXd P(1, 3);
+        for(int i = 0; i < 3; i++) P(0, i) = Ini(0, i) + translation[i];
+        update_point(P);
+        Po = P;
     }
 
     void Visualize::add_object_to_scene(const Eigen::MatrixXd &V, const Eigen::MatrixXi &F, 
@@ -373,6 +377,7 @@ bool Visualize::plot_phase_space(const char *label, ImVec2 q_bounds, ImVec2 q_do
     }
 
      void Visualize::update_point(const Eigen::MatrixXd &P){
+        //std::cout<<P<<std::endl;
         g_viewer.data().set_points(P,Eigen::RowVector3d(1,0,0));
     }
 

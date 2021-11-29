@@ -82,6 +82,7 @@ Eigen::VectorXd tmp_qdot;
 Eigen::VectorXd tmp_force;
 Eigen::SparseMatrixd tmp_stiffness;
 Eigen::MatrixXd Po(1,3);
+Eigen::MatrixXd Ini(1,3);
 std::vector<std::pair<Eigen::Vector3d, unsigned int>> spring_points;
 
 bool visualization = false;
@@ -92,7 +93,7 @@ bool magnet = false;
 bool box = false;
 bool cube86 = false;
 bool constant = true;
-
+bool menu = true;
 //selection spring
 double k_selected = 1e5;
 double mov = 0.0;
@@ -102,7 +103,10 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
     double V_ele, T_ele, KE,PE;
 
     spring_points.clear();
-
+    if(menu){
+        Visualize::update_parameters(magnet, constant, Ini, Po);
+    }
+    //std::cout<<magnet<<std::endl;
     //Interaction spring
     Eigen::Vector3d mouse;
     Eigen::Vector6d dV_mouse;
@@ -300,6 +304,9 @@ bool key_down_callback(igl::opengl::glfw::Viewer &viewer, unsigned char key, int
         Po(0, 2)+=mov;
         Visualize::update_point(Po);
     }
+    else if(key=='S'){
+        menu = !menu;
+    }
     //std::cout<<key<<std::endl;
     return false;
 }
@@ -405,12 +412,16 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
     Visualize::toggle_skinning(false);
     if(bunny){
         Po<<mx(0), mx(1), mx(2);
+        Ini<<mx(0), mx(1), mx(2);
     }
     else if(cube86){
         Po<<mi(0) - 1.0, mi(1) + 1.5, mi(2) + 0.5;
+        Ini<<mi(0) - 1.0, mi(1) + 1.5, mi(2) + 0.5;
+        //Po<<mi(0) , mi(1), mi(2);
     }
     else{
         Po<<mi(0) + 0.45, mx(1) + 0.3, mi(2) + 0.2;
+        Ini<<mi(0) + 0.45, mx(1) + 0.3, mi(2) + 0.2;
     }
     Visualize::add_point(Po);
 
