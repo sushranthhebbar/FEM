@@ -14275,6 +14275,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/poisson.cpp.o: ../src/poisson.cpp \
   ../extern/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
   ../extern/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
   ../shared/include/EigenTypes.h \
+  ../include/bar_magnet.h \
   /usr/include/c++/9/iostream
 
 CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o: ../src/psi_neo_hookean.cpp \

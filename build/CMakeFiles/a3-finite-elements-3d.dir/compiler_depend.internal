@@ -14304,6 +14304,7 @@ CMakeFiles/a3-finite-elements-3d.dir/src/poisson.cpp.o
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/extern/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h
  /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/shared/include/EigenTypes.h
+ /home/sushranth/Downloads/Advanced_Computer_Graphics/physics_animation/FEM/include/bar_magnet.h
  /usr/include/c++/9/iostream
 
 CMakeFiles/a3-finite-elements-3d.dir/src/psi_neo_hookean.cpp.o

@@ -97,6 +97,7 @@ bool menu = true;
 //selection spring
 double k_selected = 1e5;
 double mov = 0.0;
+double magnetic_force = 0.0;
 
 inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, double t) {  
 
@@ -159,7 +160,7 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                 //std::cout<<q.segment<3>(498*3)<<std::endl;
                 epsilon = 3 * cell_width / 2;
                 heaviside(theta, phi, epsilon);
-                poisson(potential, theta, cell_width, k, grid_length);
+                poisson(potential, theta, cell_width, k, grid_length, constant, corner, magnetic_force, Po);
                 dH_Internal_field(dH, potential, cell_width, grid_length);
                 //std::cout<<q.segment<3>(498*3)<<std::endl;
                 interpolate(boundary_value, dH, corner, cell_width, Ib, P.transpose()*q2+x0, grid_length);
@@ -322,6 +323,7 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
             bunny = false;
             fully_implicit = true;
             mov = 0.1;
+            magnetic_force = 1.0 * 3e4;
         }
         else if(strcmp(argv[1], "cube86") == 0) {
             igl::readMESH("../data/cube86.mesh", V, T, F);
@@ -329,6 +331,7 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
             cube86 = true;
             fully_implicit = true;
             mov = 0.1;
+            magnetic_force = 0.5 * 1e6;
         }
         else if(strcmp(argv[1], "bunny") == 0){
             igl::readMESH("../data/coarser_bunny.mesh",V,T, F);
@@ -337,6 +340,7 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
             bunny = true;
             fully_implicit = false;
             mov = 3.0;
+            magnetic_force = 1.0 * 5e11;
         }
     }
     
