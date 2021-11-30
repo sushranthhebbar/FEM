@@ -105,7 +105,7 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
 
     spring_points.clear();
     if(menu){
-        Visualize::update_parameters(magnet, constant, Ini, Po);
+        Visualize::update_parameters(magnet, constant, mov, Ini, Po);
     }
     //std::cout<<magnet<<std::endl;
     //Interaction spring
@@ -322,7 +322,7 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
         
             bunny = false;
             fully_implicit = true;
-            mov = 0.1;
+            mov = 3.0;
             magnetic_force = 1.0 * 3e4;
         }
         else if(strcmp(argv[1], "cube86") == 0) {
@@ -330,7 +330,7 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
 
             cube86 = true;
             fully_implicit = true;
-            mov = 0.1;
+            mov = 5.0;
             magnetic_force = 0.5 * 1e6;
         }
         else if(strcmp(argv[1], "bunny") == 0){
@@ -339,7 +339,7 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
 
             bunny = true;
             fully_implicit = false;
-            mov = 3.0;
+            mov = 170.0;
             magnetic_force = 1.0 * 5e11;
         }
     }
