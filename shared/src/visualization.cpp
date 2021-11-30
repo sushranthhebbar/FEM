@@ -31,6 +31,7 @@ namespace Visualize {
     bool g_mouse_dragging = false;
     bool g_magnet = false;
     bool g_constant = true;
+    bool g_external = true;
     float translation[] = {0.0, 0.0, 0.0};
     double g_picking_tol = 0.001;
     double g_mov = 0.0;
@@ -316,6 +317,7 @@ bool Visualize::plot_phase_space(const char *label, ImVec2 q_bounds, ImVec2 q_do
             ImGui::Begin("Controls");
             ImGui::Checkbox("Magnet", &g_magnet);
             ImGui::Checkbox("Constant", &g_constant);
+            ImGui::Checkbox("External", &g_external);
             ImGui::SliderFloat3("position", translation, -1.0 * g_mov, g_mov);
             ImGui::End();
         };
@@ -328,9 +330,10 @@ bool Visualize::plot_phase_space(const char *label, ImVec2 q_bounds, ImVec2 q_do
         Visualize::g_viewer.core().is_animating = true;
     }
 
-    void Visualize::update_parameters(bool &magnet, bool &constant, double mov, Eigen::MatrixXd &Ini, Eigen::MatrixXd &Po){
+    void Visualize::update_parameters(bool &magnet, bool &constant, bool &external, double mov, Eigen::MatrixXd &Ini, Eigen::MatrixXd &Po){
         magnet = g_magnet;
         constant = g_constant;
+        external = g_external;
         g_mov = mov;
         Eigen::MatrixXd P(1, 3);
         for(int i = 0; i < 3; i++) P(0, i) = Ini(0, i) + translation[i];

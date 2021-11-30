@@ -94,6 +94,7 @@ bool box = false;
 bool cube86 = false;
 bool constant = true;
 bool menu = true;
+bool external = true;
 //selection spring
 double k_selected = 1e5;
 double mov = 0.0;
@@ -105,7 +106,7 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
 
     spring_points.clear();
     if(menu){
-        Visualize::update_parameters(magnet, constant, mov, Ini, Po);
+        Visualize::update_parameters(magnet, constant, external, mov, Ini, Po);
     }
     //std::cout<<magnet<<std::endl;
     //Interaction spring
@@ -205,8 +206,12 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                                 bar_magnet(H, Po, p, 1.0 * 3e4);
                             }
                         }
-                        H_tot = H - boundary_value.segment<3>(3 * i);
-                        //H_tot = -boundary_value.segment<3>(3 * i);
+                        if(!external){
+                            H_tot = -boundary_value.segment<3>(3 * i);
+                        }
+                        else{
+                            H_tot = H - boundary_value.segment<3>(3 * i);
+                        }
                         c = (0.5 * mew * k * H_tot.transpose() * H_tot);
                         f.segment<3>(3 * Ib(i)) += c * n.transpose();
                     }
