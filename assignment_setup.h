@@ -186,7 +186,7 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                                 H << 0.0, 5000000.0, 0.0;// bunny
                             }
                             else{
-                                bar_magnet(H, Po, p, 1.0 * 5e11);
+                                bar_magnet(H, Po, p, magnetic_force);
                             }
                         }
                         else if(cube86){
@@ -195,7 +195,8 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                                 //H << 250000.0, 0.0, 0.0;
                             }
                             else{
-                                bar_magnet(H, Po, p, 0.5 * 1e6);
+                                //std::cout<<Po<<std::endl;
+                                bar_magnet(H, Po, p, magnetic_force);
                             }
                         }
                         else{
@@ -203,7 +204,7 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
                                 H << 0.0, 10000.0, 0.0;// arma
                             }
                             else{
-                                bar_magnet(H, Po, p, 1.0 * 3e4);
+                                bar_magnet(H, Po, p, magnetic_force);
                             }
                         }
                         if(!external){
@@ -336,7 +337,7 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
             cube86 = true;
             fully_implicit = true;
             mov = 5.0;
-            magnetic_force = 0.5 * 1e6;
+            magnetic_force = 1.0 * 1e5;
         }
         else if(strcmp(argv[1], "bunny") == 0){
             igl::readMESH("../data/coarser_bunny.mesh",V,T, F);
