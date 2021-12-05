@@ -65,7 +65,7 @@ double pi = 3.1415;
 double mew = 4 * pi * 1e-7;
 double k = 0.33; 
 double cell_width = 0.0;
-double grid_length = 32;
+double grid_length = 16;
 double epsilon = 0.0;
 //BC
 std::vector<unsigned int> fixed_point_indices;
@@ -153,7 +153,7 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
             if(magnet){
                 //std::cout<<"Before loop"<<std::endl;
                 Eigen::Vector3d corner = V.colwise().minCoeff();
-                Eigen::VectorXd phi(32 * 32 * 32);
+                Eigen::VectorXd phi(grid_length * grid_length * grid_length);
                 Eigen::VectorXd theta;
                 Eigen::MatrixXd potential, dH;
                 //std::cout<<q.segment<3>(498*3)<<std::endl;
@@ -346,7 +346,7 @@ inline void assignment_setup(int argc, char **argv, Eigen::VectorXd &q, Eigen::V
             bunny = true;
             fully_implicit = false;
             mov = 170.0;
-            magnetic_force = 1.0 * 5e11;
+            magnetic_force = 1.0 * 5e8;
         }
     }
     

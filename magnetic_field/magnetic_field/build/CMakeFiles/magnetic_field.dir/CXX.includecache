@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sushranth/Downloads/Advanced_Computer_Graphics/magnetic_field/common/controls.hpp
+
+/home/sushranth/Downloads/Advanced_Computer_Graphics/magnetic_field/common/shader.hpp
+
+/home/sushranth/Downloads/Advanced_Computer_Graphics/magnetic_field/common/texture.hpp
+
+/home/sushranth/Downloads/Advanced_Computer_Graphics/magnetic_field/magnetic_field/magnetic_field.cpp
+stdio.h
+-
+stdlib.h
+-
+vector
+-
+algorithm
+-
+GL/glew.h
+-
+GLFW/glfw3.h
+-
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+glm/gtx/norm.hpp
+-
+glm/gtc/random.hpp
+-
+../common/shader.hpp
+/home/sushranth/Downloads/Advanced_Computer_Graphics/magnetic_field/common/shader.hpp
+../common/texture.hpp
+/home/sushranth/Downloads/Advanced_Computer_Graphics/magnetic_field/common/texture.hpp
+../common/controls.hpp
+/home/sushranth/Downloads/Advanced_Computer_Graphics/magnetic_field/common/controls.hpp
+

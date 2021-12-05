@@ -1,0 +1,3 @@
+/home/sushranth/Downloads/Advanced_Computer_Graphics/magnetic_field/magnetic_field/build/CMakeFiles/rebuild_cache.dir
+/home/sushranth/Downloads/Advanced_Computer_Graphics/magnetic_field/magnetic_field/build/CMakeFiles/edit_cache.dir
+/home/sushranth/Downloads/Advanced_Computer_Graphics/magnetic_field/magnetic_field/build/CMakeFiles/magnetic_field.dir
